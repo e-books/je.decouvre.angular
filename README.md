@@ -1,2 +1,4 @@
-je.decouvre.angular
-===================
+#Je découvre Angular
+
+![Alt "angularjs.png"](angularjs.png)
+

@@ -1,0 +1,21 @@
+{
+  "name": "ma-vie-mon-oeuvre",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-books/je.decouvre.angular"
+  },
+  "author": "@k33g_org <https://twitter.com/k33g_org>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-gitbook": "0.4.2",
+    "grunt-gh-pages": "0.9.1",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
