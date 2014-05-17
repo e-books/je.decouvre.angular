@@ -1,17 +1,13 @@
 CACHE MANIFEST
-# Revision 1400319334618
+# Revision 1400364041678
 
 CACHE:
 index.html
-chap-00/01-mon-texte.html
-chap-00/02-mon-texte.html
+chap-00/01-preparation.html
+chap-00/02-architecture-minimale.html
+chap-00/03-ajouter-un-formulaire.html
 chap-00/README.html
-chap-01/01-mon-texte.html
-chap-01/02-mon-texte.html
 chap-01/README.html
-chap-02/01-mon-texte.html
-chap-02/02-mon-texte.html
-chap-02/README.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
 gitbook/fonts/anonymouspro/400i.woff
