@@ -1,11 +1,9 @@
 # Summary
 
-* [Chapitre 0](chap-00/README.md)
-    * [Partie 1](chap-00/01-mon-texte.md)
-    * [Partie 2](chap-00/02-mon-texte.md)
-* [Chapitre 1](chap-01/README.md)
-    * [Partie 1](chap-01/01-mon-texte.md)
-    * [Partie 2](chap-01/02-mon-texte.md)
-* [Chapitre 2](chap-02/README.md)
-    * [Partie 1](chap-02/01-mon-texte.md)
-    * [Partie 2](chap-02/02-mon-texte.md)
+* [1ers pas](chap-00/README.md)
+    * [Préparation](chap-00/01-preparation.md)
+    * [Architecture minimale](chap-00/02-architecture-minimale.md)
+    * [Formulaire](chap-00/03-ajouter-un-formulaire.md)
+* [WIP](chap-01/README.md)
+
+
