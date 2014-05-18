@@ -113,5 +113,5 @@ Le bouton est un lien (pourquoi pas?) avec une directive `ng-click="createBook()
 
 Vous pouvez tester :)
 
-C'est tout pour aujourd'hui. Dans le chapitre suivant je vous montre comment faire "plus propre" en utilisant les **services**, **les factories** puis nous attaquerons la partie "ajax" et serveur. 
+C'est tout pour aujourd'hui. Dans la rubrique suivante je vous montre comment faire "plus propre" en utilisant les **les factories**.
 
