@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.3" data-basepath=".." data-revision="1400364041677">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.3" data-basepath=".." data-revision="1400439692610">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -214,19 +214,19 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_3">
                     
                         <h1 id="ajouter-un-formulaire-de-saisie-pour-modifier-les-livres">Ajouter un formulaire de saisie pour modifier les livres</h1>
 <h2 id="modifier-les-livres">Modifier les livres</h2>
-<p>Commençons par ajouter 2 propriétés <code>niveaux</code>, <code>selectedBook</code> et une méthode <code>selectBook</code></p>
+<p>Commençons par ajouter 2 propriétés <code>levels</code>, <code>selectedBook</code> et une méthode <code>selectBook</code></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
   $scope.books = [
-      {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, niveau:<span class="hljs-string">"très bon"</span>}
-    , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, niveau:<span class="hljs-string">"bon"</span>}
-    , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, niveau:<span class="hljs-string">"débutant"</span>}
+      {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, level:<span class="hljs-string">"très bon"</span>}
+    , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
+    , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, level:<span class="hljs-string">"débutant"</span>}
   ];
 
-  $scope.niveaux = [
+  $scope.levels = [
     <span class="hljs-string">"très bon"</span>, <span class="hljs-string">"bon"</span>, <span class="hljs-string">"débutant"</span>
   ];
 
@@ -247,8 +247,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.description"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"inputType"</span>
-              <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.niveau"</span>
-              <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"niveau for niveau in niveaux"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+              <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.level"</span>
+              <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"level for level in levels"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
@@ -258,7 +258,7 @@
 <pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Books<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"book in books"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"selectBook(book)"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.niveau}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -268,8 +268,8 @@
 <ul>
 <li><code>ng-model=&quot;selectedBook.title&quot;</code> </li>
 <li><code>ng-model=&quot;selectedBook.description&quot;</code></li>
-<li><code>ng-model=&quot;selectedBook.niveau&quot;</code></li>
-<li><code>ng-options=&quot;niveau for niveau in niveaux&quot;</code></li>
+<li><code>ng-model=&quot;selectedBook.level&quot;</code></li>
+<li><code>ng-options=&quot;level for level in levels&quot;</code></li>
 </ul>
 <p>Vous pouvez dès maintenant essayer, et vous allez vous apercevoir que lorsque vous sélectionnez un livre, le formulaire se met à jour, et lorsque vous modifiez les données dans le formulaire, la liste se met à jour automatiquement de manière assez magique, je dois bien le reconnaître.</p>
 <h2 id="ajouter-un-livre">Ajouter un livre</h2>
@@ -278,7 +278,7 @@
   $scope.books.push({
     title : <span class="hljs-string">"This is a new Book"</span>,
     description : <span class="hljs-string">"..."</span>,
-    niveau: <span class="hljs-string">"???"</span>
+    level: <span class="hljs-string">"???"</span>
   });
 }
 </code></pre>
@@ -290,15 +290,15 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.description"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"inputType"</span>
-              <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.niveau"</span>
-              <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"niveau for niveau in niveaux"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+              <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"selectedBook.level"</span>
+              <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"level for level in levels"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Livres<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"book in books"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"selectBook(book)"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.niveau}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - level <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- le bouton est ici !!! --&gt;</span>

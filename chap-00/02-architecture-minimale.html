@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.2" data-basepath=".." data-revision="1400364041677">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.2" data-basepath=".." data-revision="1400439692610">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -214,7 +214,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_4">
                     
                         <h1 id="architecture-minimale-d-une-application-angular">Architecture minimale d&#39;une application Angular</h1>
 <p>Une application Angular nécessite au minimum :</p>
@@ -242,9 +242,9 @@
 <p>Modifions notre contrôleur pour qu&#39;il puisse nous fournir une liste de livres:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
   $scope.books = [
-      {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, niveau:<span class="hljs-string">"très bon"</span>}
-    , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, niveau:<span class="hljs-string">"bon"</span>}
-    , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, niveau:<span class="hljs-string">"débutant"</span>}
+      {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, level:<span class="hljs-string">"très bon"</span>}
+    , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
+    , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, level:<span class="hljs-string">"débutant"</span>}
   ];
 })
 </code></pre>
@@ -262,7 +262,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Livres<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"book in books"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.niveau}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -280,7 +280,7 @@
 </ul>
 <p>Et du templating pour afficher tout ça :</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.niveau}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
 </code></pre>
 <p>Vous pouvez dès maintenant afficher votre page avec la liste des livres en ouvrant <code>index.html</code> dans votre navigateur préféré.</p>
 
