@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Architecture minimale | Je découvre Angular</title>
+        <title>Factory | Je découvre Angular</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../chap-00/03-ajouter-un-formulaire.html" />
+        <link rel="next" href="../chap-01/README.html" />
         
         
-        <link rel="prev" href="../chap-00/01-preparation.html" />
+        <link rel="prev" href="../chap-00/03-ajouter-un-formulaire.html" />
         
 
-        <meta property="og:title" content="Architecture minimale | Je découvre Angular">
+        <meta property="og:title" content="Factory | Je découvre Angular">
         <meta property="og:site_name" content="Je découvre Angular">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.2" data-basepath=".." data-revision="1400441825753">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.4" data-basepath=".." data-revision="1400441825753">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -120,7 +120,7 @@
 
         
         <li>
-            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-00/02-architecture-minimale.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-00/04-utiliser-une-factory.md" target="blank">Edit and Contribute</a>
         </li>
         
 
@@ -201,7 +201,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 50%;min-width: 33.333333333333336%;"></div>
+        <div class="inner" style="width: 83.33333333333333%;min-width: 66.66666666666667%;"></div>
     </div>
     <div class="chapters">
     
@@ -213,9 +213,9 @@
     
         <a href="../chap-00/02-architecture-minimale.html" title="Architecture minimale" class="chapter done " data-progress="1.2" style="left: 50%;"></a>
     
-        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter  " data-progress="1.3" style="left: 66.66666666666667%;"></a>
+        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter done " data-progress="1.3" style="left: 66.66666666666667%;"></a>
     
-        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter  " data-progress="1.4" style="left: 83.33333333333333%;"></a>
+        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter done " data-progress="1.4" style="left: 83.33333333333333%;"></a>
     
         <a href="../chap-01/README.html" title="WIP" class="chapter  new-chapter" data-progress="2" style="left: 100%;"></a>
     
@@ -224,75 +224,82 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="architecture-minimale-d-une-application-angular">Architecture minimale d&#39;une application Angular</h1>
-<p>Une application Angular nécessite au minimum :</p>
-<ul>
-<li>un <strong>module</strong> principal : le code js qui représente votre application</li>
-<li>au moins un <strong>contrôleur</strong> (en js) qui contiendra les traitements</li>
-<li>au moins une <strong>vue</strong> qui est tout simplement du code html contenu dans votre page</li>
-<li>des <strong>directives</strong> qui sont des attributs des tags html et qui servent à faire le lien entre les vues et les contrôleurs</li>
-</ul>
-<p>Plus concrètement en code ça donnerait ceci :</p>
-<h2 id="module-principal">Module principal</h2>
-<p>Dans <code>main.js</code> définissons le module de notre application <code>booksApp</code></p>
+                        <h1 id="angular-utilisation-d-une-factory">Angular, utilisation d&#39;une factory</h1>
+<p>Il est tard, donc ce soir cela va être court, mais nous allons voir comment commencer à ordonner notre code proprement : nous allons ajouter une factory à notre module d&#39;application, cette factory sera une sorte d&#39;helper destiné à nous fournir les données, nous l&#39;appellerons <code>Models</code>.</p>
+<h2 id="factory">Factory</h2>
+<p>Pour créer une factory il suffit d&#39;utiliser la méthode <code>factory</code> de notre module angular, de la facon suivante :</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> booksApp = angular.module(<span class="hljs-string">"booksApp"</span>, []);
-</code></pre>
-<p>Nous devons expliquer à Angular que nous &quot;lions&quot; notre page à <code>booksApp</code>, donc dans <code>index.html</code>, modifier le tag <code>&lt;body&gt;</code> de la façon suivante avec la directive <code>ng-app</code> :</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"booksApp"</span>&gt;</span>
-</code></pre>
-<h2 id="un-contr-leur">Un Contrôleur</h2>
-<p>Dans <code>main.js</code> définissons le Contrôleur <code>MainCtrl</code> que l&#39;on rattache à notre application <code>booksApp</code>:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
 
-})
+<span class="hljs-comment">/*--- factory ---*/</span>
+booksApp.factory(<span class="hljs-string">"Models"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">return</span> {}
+});
 </code></pre>
-<p><code>$scope</code> est la variable de contexte qui va contenir des informations accessibles et modifiables à la fois par le contrôleur et la vue.</p>
-<p>Modifions notre contrôleur pour qu&#39;il puisse nous fournir une liste de livres:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
-  $scope.books = [
+<p>Nous allons ensuite extraire la partie données de notre contrôleur <code>MainCtrl</code> :</p>
+<pre><code class="lang-javascript">$scope.books = [
+    {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, level:<span class="hljs-string">"très bon"</span>}
+  , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
+  , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, level:<span class="hljs-string">"débutant"</span>}
+];
+
+$scope.levels = [
+  <span class="hljs-string">"très bon"</span>, <span class="hljs-string">"bon"</span>, <span class="hljs-string">"débutant"</span>
+];
+</code></pre>
+<p>Pour l&#39;intégrer dans notre factory de la façon suivante :</p>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">var</span> books = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> [
       {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, level:<span class="hljs-string">"très bon"</span>}
-    , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
-    , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, level:<span class="hljs-string">"débutant"</span>}
-  ];
-})
-</code></pre>
-<h2 id="une-vue">Une Vue</h2>
-<p>Et modifions notre code html de la façon suivante :</p>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>livres<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"booksApp"</span>&gt;</span>
+      , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
+      , {title:<span class="hljs-string">"J'apprends Angular"</span>, description:<span class="hljs-string">"from scratch"</span>, level:<span class="hljs-string">"débutant"</span>}
+    ]
+  };
+  <span class="hljs-keyword">var</span> levels = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> [
+      <span class="hljs-string">"très bon"</span>, <span class="hljs-string">"bon"</span>, <span class="hljs-string">"débutant"</span>
+    ];
+  }
 
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"MainCtrl"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Livres<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"book in books"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular/angular.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-keyword">return</span> {
+    books : books, levels : levels
+  }
 </code></pre>
-<p>Nous avons donc utilisé 2 directives supplémentaires :</p>
-<ul>
-<li><code>&lt;div ng-controller=&quot;MainCtrl&quot;&gt;</code> pour lier notre contrôleur au <code>&lt;div&gt;</code></li>
-<li><code>&lt;div ng-repeat=&quot;book in books&quot;&gt;</code> pour parcourir le contenu de <code>$scope.books</code></li>
-</ul>
-<p>Et du templating pour afficher tout ça :</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{book.description}} - Niveau <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
+<p>Donc, notre factory <code>Models</code> comporte 2 méthodes <code>books()</code> et <code>levels()</code> qui vont maintenant fournir les données à notre contrôleur.</p>
+<h2 id="modification-du-contr-leur">Modification du contrôleur</h2>
+<p>Modifiez le contrôleur de la manière suivante :</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope, Models)</span> {</span>
+
+  $scope.books = Models.books();
+  $scope.levels = Models.levels();
+
+  <span class="hljs-comment">/*--- partie de code inchangées ---*/</span>
+  $scope.selectedBook = <span class="hljs-literal">null</span>;
+
+  $scope.selectBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+    $scope.selectedBook = book;
+  }
+
+  $scope.createBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    $scope.books.push({
+      title : <span class="hljs-string">"This is a new Book"</span>,
+      description : <span class="hljs-string">"..."</span>,
+      level: <span class="hljs-string">"???"</span>
+    });
+  }
+});
 </code></pre>
-<p>Vous pouvez dès maintenant afficher votre page avec la liste des livres en ouvrant <code>index.html</code> dans votre navigateur préféré.</p>
+<p>Nous avons remplacé le code des données précédent par :</p>
+<pre><code class="lang-javascript">$scope.books = Models.books();
+$scope.levels = Models.levels();
+</code></pre>
+<p><strong>Et surtout, notez bien la modification des paramètres du contrôleur:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope, Models)</span> {</span>})
+</code></pre>
+<p>Vous pouvez tester à nouveau votre page <code>index.html</code> qui fonctionne de la même façon sans avoir été modifiée. Nous avons donc séparé les responsabilités entre la factory <code>Models</code> et notre contrôleur.
+Nous verrons par la suite comment ajouter un service pour ensuite nous connecter à un serveur.</p>
 
                     
                     </section>
@@ -302,10 +309,10 @@
         </div>
 
         
-        <a href="../chap-00/01-preparation.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../chap-00/03-ajouter-un-formulaire.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chap-00/03-ajouter-un-formulaire.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        <a href="../chap-01/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
