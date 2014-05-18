@@ -40,9 +40,9 @@ Modifions notre contrôleur pour qu'il puisse nous fournir une liste de livres:
 ```javascript
 var MainCtrl = booksApp.controller("MainCtrl", function($scope) {
   $scope.books = [
-      {title:"Backbone c'est de la balle", description:"tutorial bb", niveau:"très bon"}
-    , {title:"React ça dépote", description:"se perfectionner avec React", niveau:"bon"}
-    , {title:"J'apprends Angular", description:"from scratch", niveau:"débutant"}
+      {title:"Backbone c'est de la balle", description:"tutorial bb", level:"très bon"}
+    , {title:"React ça dépote", description:"se perfectionner avec React", level:"bon"}
+    , {title:"J'apprends Angular", description:"from scratch", level:"débutant"}
   ];
 })
 ```
@@ -64,7 +64,7 @@ Et modifions notre code html de la façon suivante :
       <h2>Livres</h2>
       <div ng-repeat="book in books">
         <h4>{{book.title}}</h4>
-        <p>{{book.description}} - Niveau <b>{{book.niveau}}</b></p>
+        <p>{{book.description}} - Niveau <b>{{book.level}}</b></p>
         <hr>
       </div>
     </div>
@@ -85,7 +85,7 @@ Et du templating pour afficher tout ça :
 
 ```html
 <h4>{{book.title}}</h4>
-<p>{{book.description}} - Niveau <b>{{book.niveau}}</b>
+<p>{{book.description}} - Niveau <b>{{book.level}}</b>
 ```
 
 Vous pouvez dès maintenant afficher votre page avec la liste des livres en ouvrant `index.html` dans votre navigateur préféré.

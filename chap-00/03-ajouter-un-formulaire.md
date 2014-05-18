@@ -2,17 +2,17 @@
 
 ##Modifier les livres
 
-Commençons par ajouter 2 propriétés `niveaux`, `selectedBook` et une méthode `selectBook`
+Commençons par ajouter 2 propriétés `levels`, `selectedBook` et une méthode `selectBook`
 
 ```javascript
 var MainCtrl = booksApp.controller("MainCtrl", function($scope) {
   $scope.books = [
-      {title:"Backbone c'est de la balle", description:"tutorial bb", niveau:"très bon"}
-    , {title:"React ça dépote", description:"se perfectionner avec React", niveau:"bon"}
-    , {title:"J'apprends Angular", description:"from scratch", niveau:"débutant"}
+      {title:"Backbone c'est de la balle", description:"tutorial bb", level:"très bon"}
+    , {title:"React ça dépote", description:"se perfectionner avec React", level:"bon"}
+    , {title:"J'apprends Angular", description:"from scratch", level:"débutant"}
   ];
 
-  $scope.niveaux = [
+  $scope.levels = [
     "très bon", "bon", "débutant"
   ];
 
@@ -36,8 +36,8 @@ Et dans notre vue ajoutons le formulaire suivant :
     <input ng-model="selectedBook.description">
     <div>
       <select id="inputType"
-              ng-model="selectedBook.niveau"
-              ng-options="niveau for niveau in niveaux"></select>
+              ng-model="selectedBook.level"
+              ng-options="level for level in levels"></select>
     </div>
   </div>
   <hr>
@@ -50,7 +50,7 @@ Et modifions la portion de code précédente en y ajoutant la directive `ng-clic
   <h2>Books</h2>
   <div ng-repeat="book in books" ng-click="selectBook(book)">
     <h4>{{book.title}}</h4>
-    <p>{{book.description}} - Niveau <b>{{book.niveau}}</b>
+    <p>{{book.description}} - Niveau <b>{{book.level}}</b>
     <hr>
   </div>
 </div>
@@ -62,8 +62,8 @@ Et le formulaire de saisie sera mis à jour automatiquement grâce aux directive
 
 - `ng-model="selectedBook.title"` 
 - `ng-model="selectedBook.description"`
-- `ng-model="selectedBook.niveau"`
-- `ng-options="niveau for niveau in niveaux"`
+- `ng-model="selectedBook.level"`
+- `ng-options="level for level in levels"`
 
 Vous pouvez dès maintenant essayer, et vous allez vous apercevoir que lorsque vous sélectionnez un livre, le formulaire se met à jour, et lorsque vous modifiez les données dans le formulaire, la liste se met à jour automatiquement de manière assez magique, je dois bien le reconnaître.
 
@@ -76,7 +76,7 @@ $scope.createBook = function() {
   $scope.books.push({
     title : "This is a new Book",
     description : "...",
-    niveau: "???"
+    level: "???"
   });
 }
 ```
@@ -91,15 +91,15 @@ Puis ajouter un bouton (`<a href="#" ng-click="createBook()">Ajouter un livre</a
     <input ng-model="selectedBook.description">
     <div>
       <select id="inputType"
-              ng-model="selectedBook.niveau"
-              ng-options="niveau for niveau in niveaux"></select>
+              ng-model="selectedBook.level"
+              ng-options="level for level in levels"></select>
     </div>
   </div>
   <hr>
   <h2>Livres</h2>
   <div ng-repeat="book in books" ng-click="selectBook(book)">
     <h4>{{book.title}}</h4>
-    <p>{{book.description}} - Niveau <b>{{book.niveau}}</b>
+    <p>{{book.description}} - level <b>{{book.level}}</b>
     <hr>
   </div>
   <!-- le bouton est ici !!! -->
