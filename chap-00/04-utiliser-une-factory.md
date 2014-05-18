@@ -33,6 +33,8 @@ $scope.levels = [
 Pour l'intégrer dans notre factory de la façon suivante :
 
 ```javascript
+/*--- factory ---*/
+booksApp.factory("Models", function() {
   var books = function() {
     return [
       {title:"Backbone c'est de la balle", description:"tutorial bb", level:"très bon"}
@@ -49,6 +51,7 @@ Pour l'intégrer dans notre factory de la façon suivante :
   return {
     books : books, levels : levels
   }
+});
 ```
 
 Donc, notre factory `Models` comporte 2 méthodes `books()` et `levels()` qui vont maintenant fournir les données à notre contrôleur.
