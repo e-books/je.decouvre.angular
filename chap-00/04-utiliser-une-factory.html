@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.4" data-basepath=".." data-revision="1400441825753">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="1.4" data-basepath=".." data-revision="1400442040281">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -250,7 +250,9 @@ $scope.levels = [
 ];
 </code></pre>
 <p>Pour l&#39;intégrer dans notre factory de la façon suivante :</p>
-<pre><code class="lang-javascript">  <span class="hljs-keyword">var</span> books = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+<pre><code class="lang-javascript"><span class="hljs-comment">/*--- factory ---*/</span>
+booksApp.factory(<span class="hljs-string">"Models"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> books = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
     <span class="hljs-keyword">return</span> [
       {title:<span class="hljs-string">"Backbone c'est de la balle"</span>, description:<span class="hljs-string">"tutorial bb"</span>, level:<span class="hljs-string">"très bon"</span>}
       , {title:<span class="hljs-string">"React ça dépote"</span>, description:<span class="hljs-string">"se perfectionner avec React"</span>, level:<span class="hljs-string">"bon"</span>}
@@ -266,6 +268,7 @@ $scope.levels = [
   <span class="hljs-keyword">return</span> {
     books : books, levels : levels
   }
+});
 </code></pre>
 <p>Donc, notre factory <code>Models</code> comporte 2 méthodes <code>books()</code> et <code>levels()</code> qui vont maintenant fournir les données à notre contrôleur.</p>
 <h2 id="modification-du-contr-leur">Modification du contrôleur</h2>
