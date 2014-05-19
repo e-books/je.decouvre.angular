@@ -1,6 +1,6 @@
 #Angular, utilisation d'une factory
 
-Il est tard, donc ce soir cela va être court, mais nous allons voir comment commencer à ordonner notre code proprement : nous allons ajouter une factory à notre module d'application, cette factory sera une sorte d'helper destiné à nous fournir les données, nous l'appellerons `Models`.
+Cela va être court, mais nous allons voir comment commencer à ordonner notre code proprement : nous allons ajouter une factory à notre module d'application, cette factory sera une sorte d'helper destiné à nous fournir les données, nous l'appellerons `Models`.
 
 ##Factory
 
