@@ -262,3 +262,20 @@ Cela vous permettra "d'essayer" le service de mise à jour dans la console de vo
     updateBook({ title: 'Hello World!', description: 'le chemin du programmeur', level: 'bon' _id: '0HC0iIQLD3HJ1YOL' })
 
 C'est tout pour cette partie, c'est relativement simple. Dans une prochaine partie, nous ferons un peu de "cosmétique" pour rendre notre application plus agréable à utiliser avant de passer à des sujet "plus techniques"
+
+***
+
+####Remarques:
+
+*Je retranscris ici la/les remarques que j'ai pu avoir et que j'ai trouvé intéressantes. N'hésitez surtout pas c'est constructif et formateur*.
+
+#####Par Eric Taix
+
+>>Et renvoyer la promise plutôt que d'appeler une callback ?
+Du style :
+
+    BooksServices.getAll().then(function(data) {
+        $scope.books = data;
+    })
+
+>>Ca permet de gérer l'erreur dans le contrôleur et d'avoir plusieurs abonnés à la promise dans différentes couches (ex: contrôleur + service).
