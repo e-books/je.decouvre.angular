@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Service $resource | Je découvre Angular</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="e-books">
+        <meta name="description" content="![Alt &quot;angularjs.png&quot;](angularjs.png)">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        
+        <link rel="prev" href="../chap-01/01-services-api-http.html" />
+        
+
+        <meta property="og:title" content="Service $resource | Je découvre Angular">
+        <meta property="og:site_name" content="Je découvre Angular">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/e-books">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.2" data-basepath=".." data-revision="1400593601752">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/e-books/je.decouvre.angular" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/e-books/je.decouvre.angular/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/e-books/je.decouvre.angular/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Je découvre Angular</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/e-books" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-01/02-service-resource.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="chap-00/README.html">
+                
+                <a href="../chap-00/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> 1ers pas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="chap-00/01-preparation.html">
+                            
+                            <a href="../chap-00/01-preparation.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Préparation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="chap-00/02-architecture-minimale.html">
+                            
+                            <a href="../chap-00/02-architecture-minimale.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Architecture minimale
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="chap-00/03-ajouter-un-formulaire.html">
+                            
+                            <a href="../chap-00/03-ajouter-un-formulaire.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="chap-00/04-utiliser-une-factory.html">
+                            
+                            <a href="../chap-00/04-utiliser-une-factory.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Factory
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="chap-01/README.html">
+                
+                <a href="../chap-01/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Jouer avec le serveur
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="chap-01/01-services-api-http.html">
+                            
+                            <a href="../chap-01/01-services-api-http.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Services et API $http
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="chap-01/02-service-resource.html">
+                            
+                            <a href="../chap-01/02-service-resource.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Service $resource
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 87.5%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chap-00/README.html" title="1ers pas" class="chapter done new-chapter" data-progress="1" style="left: 12.5%;"></a>
+    
+        <a href="../chap-00/01-preparation.html" title="Préparation" class="chapter done " data-progress="1.1" style="left: 25%;"></a>
+    
+        <a href="../chap-00/02-architecture-minimale.html" title="Architecture minimale" class="chapter done " data-progress="1.2" style="left: 37.5%;"></a>
+    
+        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter done " data-progress="1.3" style="left: 50%;"></a>
+    
+        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter done " data-progress="1.4" style="left: 62.5%;"></a>
+    
+        <a href="../chap-01/README.html" title="Jouer avec le serveur" class="chapter done new-chapter" data-progress="2" style="left: 75%;"></a>
+    
+        <a href="../chap-01/01-services-api-http.html" title="Services et API $http" class="chapter done " data-progress="2.1" style="left: 87.5%;"></a>
+    
+        <a href="../chap-01/02-service-resource.html" title="Service $resource" class="chapter done " data-progress="2.2" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_8">
+                    
+                        <h1 id="angular-effleurer-les-ressources-">Angular, &quot;Effleurer les ressources&quot;</h1>
+<p>Les ressources (<code>$resource</code>) sont un module très puissant d&#39;Angular. Nous allons aujourd&#39;hui juste effleurer leurs possibilités, mais ça sera largement suffisant pour faire pas mal de chose en termes de &quot;discussions&quot; avec notre serveur http. On peut considérer <code>$resource</code> comme un helper &quot;autour&quot; de <code>$http</code> pour faciliter des appels à des API &quot;RESTful&quot;.</p>
+<p>A la fin de ce paragraphe nous aurons un service capable de faire les requêtes suivantes:</p>
+<ul>
+<li>GET : <a href="/books">/books</a></li>
+<li>GET : <a href="/books/{id}">/books/{id}</a></li>
+<li>DELETE : <a href="/books/{id}">/books/{id}</a></li>
+<li>POST : <a href="/books">/books</a></li>
+<li>PUT : <a href="/books/{id}">/books/{id}</a></li>
+</ul>
+<h2 id="pr-requis">Pré-requis</h2>
+<p>Nous avons besoin du module <code>$resource</code> présent dans <code>angular-resource</code>. Veuillez donc ajouter dans votre fichier <code>bower.json</code> la ligne <code>&quot;angular-resource&quot; : &quot;1.2.16&quot;</code>, nous avons donc normalement :</p>
+<pre><code>{
+  &quot;name&quot;: &quot;books&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;angular&quot; : &quot;1.2.16&quot;,
+    &quot;angular-resource&quot; : &quot;1.2.16&quot;
+  }
+}
+</code></pre><p>Faite ensuite en mode commande, dans le répertoire du projet un petit:</p>
+<pre><code>bower update
+</code></pre><p>Et, allez ajouter dans <code>index.html</code> (juste après le tag <code>&lt;script&gt;</code> d&#39;Angular) ceci:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular-resource/angular-resource.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>Nous sommes bon pour commencer.</p>
+<h2 id="modification-de-booksservices-query-et-save-">Modification de <code>BooksServices</code> : <code>query</code> et <code>save</code></h2>
+<p>Nous allons complètement modifier notre service <code>BooksServices</code>, vous pouvez tout supprimer à l&#39;intérieur, comme ceci, tout en injectant en paramètre <code>$resource</code> :</p>
+<pre><code class="lang-javascript">booksApp.service(<span class="hljs-string">"BooksServices"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($resource)</span> {</span>
+
+});
+</code></pre>
+<p>Ensuite nous allons définir une ressource au sens Angular :</p>
+<pre><code class="lang-javascript">booksApp.service(<span class="hljs-string">"BooksServices"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($resource)</span> {</span>
+  <span class="hljs-keyword">var</span> books = $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{});  
+});
+</code></pre>
+<p>La simple définition de cette ressource va nous permettre de re-écrire simplement nos méthodes <code>getAll</code> et <code>create</code> :</p>
+<pre><code class="lang-javascript">booksApp.service(<span class="hljs-string">"BooksServices"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($resource)</span> {</span>
+  <span class="hljs-keyword">var</span> books = $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{});  
+
+  <span class="hljs-keyword">this</span>.getAll = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> {</span>
+    books.query().$promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      callback(data);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>});
+  }
+
+  <span class="hljs-keyword">this</span>.create = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book, callback)</span> {</span>
+    books.save(book).$promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+      callback(data);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>});
+  }
+
+});
+</code></pre>
+<p><strong>Remarque</strong>: il est aussi possible d&#39;utiliser cette notation:</p>
+<pre><code class="lang-javascript">booksApp.service(<span class="hljs-string">"BooksServices"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($resource)</span> {</span>
+  <span class="hljs-keyword">var</span> books = $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{});  
+
+  <span class="hljs-keyword">this</span>.getAll = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> {</span>
+    books.query().success(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      callback(data);
+    });
+  }
+
+  <span class="hljs-keyword">this</span>.create = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book, callback)</span> {</span>
+    books.save(book).success(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+      callback(data);
+    })
+  }
+
+});
+</code></pre>
+<p>Vous pouvez tester à nouveau votre code, vous verrez qu&#39;il fonctionne comme avant.</p>
+<h2 id="cr-ation-des-services-update-delete-getonebyid-">Création des services <code>update</code>, <code>delete</code>, <code>getOneById</code></h2>
+<p>Si on se limite au paragraphe précédent, on pourrait penser que <code>$resource</code> n&#39;a que peu d&#39;intérêt. Ce serait une erreur, voyons donc ce que cela peut nous apporter sans trop d&#39;effort. <em>Je vous engage à lire la documentation et les tutoriaux sur le sujet si vous souhaitez aller plus loin, mais les bases permettent de faire pas mal de choses.</em></p>
+<h3 id="ajout-des-services-getonebyid-et-deleteonebyid-">Ajout des services <code>getOneById</code> et <code>deleteOneById</code></h3>
+<p>Dans notre <code>BooksServices</code> ajoutons déjà 2 méthodes:</p>
+<ul>
+<li><code>getOneById</code> : permet de retrouver un modèle par son id</li>
+<li><code>deleteOneById</code> : permet de supprimer un modèle par son id</li>
+</ul>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">this</span>.getOneById = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id, callback)</span> {</span>
+    books.get({id:id}).$promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+      callback(data);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>});
+  }
+
+  <span class="hljs-keyword">this</span>.deleteOneById = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id, callback)</span> {</span>
+    books.delete({id:id}).$promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+      callback(data);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>});
+  }
+</code></pre>
+<h3 id="modification-du-contr-leur">Modification du contrôleur</h3>
+<p>Ajoutons 2 méthodes à notre contrôleur:</p>
+<ul>
+<li><code>getBook</code></li>
+<li><code>deleteBook</code></li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MainCtrl = booksApp.controller(<span class="hljs-string">"MainCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope, Models, BooksServices)</span> {</span>
+
+  $scope.books = <span class="hljs-literal">null</span>;
+  $scope.levels = Models.levels();
+
+  $scope.getAllBooks = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    BooksServices.getAll(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      $scope.books = data;
+    })
+  }
+
+  $scope.createBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+    BooksServices.create(book, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      $scope.getAllBooks();
+    })
+  }
+
+  $scope.getBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id)</span> {</span>
+    BooksServices.getOneById(id, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      <span class="hljs-comment">//TODO</span>
+      console.log(<span class="hljs-string">"get one book"</span>, data)
+    })
+  }
+
+  $scope.deleteBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id)</span> {</span>
+    BooksServices.deleteOneById(id, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      <span class="hljs-comment">//TODO</span>
+      console.log(<span class="hljs-string">"delete one book"</span>, data)
+    })
+  }
+
+  $scope.getAllBooks()
+});
+</code></pre>
+<h3 id="services-express-correspondant-ajouter">Services Express correspondant à ajouter</h3>
+<p>Allons ajouter le code des services JSON dans l&#39;application Express en ajoutant ceci dans le fichier <code>app.js</code> :</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Obtenir un livre par son id</span>
+app.get(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
+  booksDb.findOne({ _id: req.params.id }, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, doc)</span> {</span>
+    res.send(doc)
+  });
+});
+
+<span class="hljs-comment">// Supprimer un livre par son id</span>
+app.delete(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
+  booksDb.remove({ _id: req.params.id }, {}, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, numRemoved)</span> {</span>
+    res.send(numRemoved);
+  });
+});
+</code></pre>
+<p>Vu que nous n&#39;avons pas modifié l&#39;IHM pour tenir compte de ces services, vous pouvez juste ajouter <strong>provisoirement</strong> ceci à la fin de votre contrôleur Angular:</p>
+<pre><code class="lang-javascript">window.getBook = $scope.getBook;
+window.deleteBook = $scope.deleteBook
+</code></pre>
+<p>Cela vous permettra &quot;d&#39;essayer&quot; vos services dans la console de votre navigateur en passant des commandes de ce type:</p>
+<pre><code>getBook({ title: &#39;Hello World!&#39;, description: &#39;le chemin du programmeur&#39;, _id: &#39;0HC0iIQLD3HJ1YOL&#39; })
+</code></pre><p>ou bien:</p>
+<pre><code>deleteBook({ _id: &#39;0HC0iIQLD3HJ1YOL&#39; })
+</code></pre><h3 id="il-en-manque-un-update-">Il en manque un! <code>update</code></h3>
+<p>Souvent les API Web (serveur) attendent une requête de type PUT avec un format comme celui-ci: <a href="URL/object/ID">URL/object/ID</a>. Avec Angular, pour ce cas-là, il faut être plus explicite (si quelqu&#39;un a une autre solution je suis preneur) et définir explicitement une méthode <code>update</code> dans notre ressource, de la manière suivante:</p>
+<p>Nous modifions la ressource dans <code>BooksServices</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> books = $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{
+  update: { method: <span class="hljs-string">'PUT'</span> }
+});
+</code></pre>
+<p>ce qui nous permet de définir le service suivant dans <code>BooksServices</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.update = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book, callback)</span> {</span>
+  books.update({id:book._id}, book).$promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span>{</span>
+    callback(data);
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>});
+}
+</code></pre>
+<h3 id="modification-du-contr-leur">Modification du contrôleur</h3>
+<p>Ajoutons 1 méthode à notre contrôleur:</p>
+<ul>
+<li><code>updateBook</code></li>
+</ul>
+<pre><code class="lang-javascript">$scope.updateBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+  BooksServices.update(book, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+    $scope.getAllBooks();
+  })
+}
+</code></pre>
+<h3 id="services-express-correspondant-ajouter">Services Express correspondant à ajouter</h3>
+<p>Allons ajouter le code du services JSON de mise à jour de modèle dans l&#39;application Express en ajoutant ceci dans le fichier <code>app.js</code> :</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Modifier un livre</span>
+app.put(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
+  booksDb.update({_id:req.params.id}, req.body, {}, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, numReplaced)</span> {</span>
+    res.send(numReplaced);
+  })
+});
+</code></pre>
+<p>Là aussi que nous n&#39;avons pas modifié l&#39;IHM pour tenir compte de ce service, vous pouvez juste ajouter <strong>provisoirement</strong> ceci à la fin de votre contrôleur Angular:</p>
+<pre><code class="lang-javascript">window.updateBook = $scope.updateBook
+</code></pre>
+<p>Cela vous permettra &quot;d&#39;essayer&quot; le service de mise à jour dans la console de votre navigateur en passant cette commande:</p>
+<pre><code>updateBook({ title: &#39;Hello World!&#39;, description: &#39;le chemin du programmeur&#39;, level: &#39;bon&#39; _id: &#39;0HC0iIQLD3HJ1YOL&#39; })
+</code></pre><p>C&#39;est tout pour cette partie, c&#39;est relativement simple. Dans une prochaine partie, nous ferons un peu de &quot;cosmétique&quot; pour rendre notre application plus agréable à utiliser avant de passer à des sujet &quot;plus techniques&quot;</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chap-01/01-services-api-http.html" class="navigation navigation-prev navigation-unique"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

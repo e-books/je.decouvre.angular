@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1400494071613
+# Revision 1400593601753
 
 CACHE:
 index.html
@@ -9,7 +9,7 @@ chap-00/03-ajouter-un-formulaire.html
 chap-00/04-utiliser-une-factory.html
 chap-00/README.html
 chap-01/01-services-api-http.html
-chap-01/02-factory-resource.html
+chap-01/02-service-resource.html
 chap-01/README.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
