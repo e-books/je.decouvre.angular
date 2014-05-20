@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1400593601753
+# Revision 1400598070584
 
 CACHE:
 index.html
@@ -7,8 +7,8 @@ chap-00/01-preparation.html
 chap-00/02-architecture-minimale.html
 chap-00/03-ajouter-un-formulaire.html
 chap-00/04-utiliser-une-factory.html
-chap-00/README.html
 chap-01/01-services-api-http.html
+chap-00/README.html
 chap-01/02-service-resource.html
 chap-01/README.html
 gitbook/app.js

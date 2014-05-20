@@ -40,7 +40,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.2" data-basepath=".." data-revision="1400593601752">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.2" data-basepath=".." data-revision="1400598070583">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -446,6 +446,24 @@ app.put(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-functio
 <p>Cela vous permettra &quot;d&#39;essayer&quot; le service de mise à jour dans la console de votre navigateur en passant cette commande:</p>
 <pre><code>updateBook({ title: &#39;Hello World!&#39;, description: &#39;le chemin du programmeur&#39;, level: &#39;bon&#39; _id: &#39;0HC0iIQLD3HJ1YOL&#39; })
 </code></pre><p>C&#39;est tout pour cette partie, c&#39;est relativement simple. Dans une prochaine partie, nous ferons un peu de &quot;cosmétique&quot; pour rendre notre application plus agréable à utiliser avant de passer à des sujet &quot;plus techniques&quot;</p>
+<hr>
+<h4 id="remarques-">Remarques:</h4>
+<p><em>Je retranscris ici la/les remarques que j&#39;ai pu avoir et que j&#39;ai trouvé intéressantes. N&#39;hésitez surtout pas c&#39;est constructif et formateur</em>.</p>
+<h5 id="par-eric-taix">Par Eric Taix</h5>
+<blockquote>
+<blockquote>
+<p>Et renvoyer la promise plutôt que d&#39;appeler une callback ?
+Du style :</p>
+</blockquote>
+</blockquote>
+<pre><code>BooksServices.getAll().then(function(data) {
+    $scope.books = data;
+})
+</code></pre><blockquote>
+<blockquote>
+<p>Ca permet de gérer l&#39;erreur dans le contrôleur et d&#39;avoir plusieurs abonnés à la promise dans différentes couches (ex: contrôleur + service).</p>
+</blockquote>
+</blockquote>
 
                     
                     </section>
