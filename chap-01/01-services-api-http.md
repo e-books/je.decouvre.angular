@@ -1,4 +1,4 @@
-#Angular, http et services
+#http et services
 
 Dans cette partie nous allons voir comment faire interagir le "front" Angular avec des services Json fournis par Express.
 

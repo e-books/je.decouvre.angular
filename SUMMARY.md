@@ -8,6 +8,7 @@
 * [Jouer avec le serveur](chap-01/README.md)
     * [Services et API $http](chap-01/01-services-api-http.md)
     * [Service $resource](chap-01/02-service-resource.md)
+    * [Pourquoi faire compliqué](chap-01/03-refactoring.md)
 
 
 

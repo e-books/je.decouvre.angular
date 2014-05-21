@@ -1,4 +1,4 @@
-#Angular, "Effleurer les ressources"
+#"Effleurer les ressources"
 
 Les ressources (`$resource`) sont un module très puissant d'Angular. Nous allons aujourd'hui juste effleurer leurs possibilités, mais ça sera largement suffisant pour faire pas mal de chose en termes de "discussions" avec notre serveur http. On peut considérer `$resource` comme un helper "autour" de `$http` pour faciliter des appels à des API "RESTful".
 
