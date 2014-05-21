@@ -40,7 +40,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.2" data-basepath=".." data-revision="1400598070583">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.2" data-basepath=".." data-revision="1400653215561">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -394,7 +394,8 @@ app.get(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-functio
 <span class="hljs-comment">// Supprimer un livre par son id</span>
 app.delete(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
   booksDb.remove({ _id: req.params.id }, {}, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, numRemoved)</span> {</span>
-    res.send(numRemoved);
+    res.statusCode = <span class="hljs-number">200</span>;
+    res.send({res:numRemoved});
   });
 });
 </code></pre>
@@ -436,8 +437,8 @@ window.deleteBook = $scope.deleteBook
 <pre><code class="lang-javascript"><span class="hljs-comment">// Modifier un livre</span>
 app.put(<span class="hljs-string">"/books/:id"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> {</span>
   booksDb.update({_id:req.params.id}, req.body, {}, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, numReplaced)</span> {</span>
-    res.send(numReplaced);
-  })
+    res.statusCode = <span class="hljs-number">200</span>;
+    res.send({res:numReplaced})
 });
 </code></pre>
 <p>Là aussi que nous n&#39;avons pas modifié l&#39;IHM pour tenir compte de ce service, vous pouvez juste ajouter <strong>provisoirement</strong> ceci à la fin de votre contrôleur Angular:</p>
