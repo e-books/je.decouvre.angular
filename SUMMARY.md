@@ -9,7 +9,7 @@
     * [Services et API $http](chap-01/01-services-api-http.md)
     * [Service $resource](chap-01/02-service-resource.md)
     * [Pourquoi faire compliqué](chap-01/03-refactoring.md)
-
-
+    * [Un peu d'ihm et de formulaire](chap-01/04-ihm.md)
+* [Les outils et frameworks autour d'Angular](chap-outils/README.md)
 
 
