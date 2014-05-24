@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Un peu d&#39;ihm et de formulaire | Je découvre Angular</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="e-books">
+        <meta name="description" content="![Alt &quot;angularjs.png&quot;](angularjs.png)">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../chap-outils/README.html" />
+        
+        
+        <link rel="prev" href="../chap-01/03-refactoring.html" />
+        
+
+        <meta property="og:title" content="Un peu d&#39;ihm et de formulaire | Je découvre Angular">
+        <meta property="og:site_name" content="Je découvre Angular">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/e-books">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="2.4" data-basepath=".." data-revision="1400928730076">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/e-books/je.decouvre.angular" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/e-books/je.decouvre.angular/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/e-books/je.decouvre.angular/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Je découvre Angular</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/e-books" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-01/04-ihm.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="chap-00/README.html">
+                
+                <a href="../chap-00/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> 1ers pas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="chap-00/01-preparation.html">
+                            
+                            <a href="../chap-00/01-preparation.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Préparation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="chap-00/02-architecture-minimale.html">
+                            
+                            <a href="../chap-00/02-architecture-minimale.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Architecture minimale
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="chap-00/03-ajouter-un-formulaire.html">
+                            
+                            <a href="../chap-00/03-ajouter-un-formulaire.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="chap-00/04-utiliser-une-factory.html">
+                            
+                            <a href="../chap-00/04-utiliser-une-factory.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Factory
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="chap-01/README.html">
+                
+                <a href="../chap-01/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Jouer avec le serveur
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="chap-01/01-services-api-http.html">
+                            
+                            <a href="../chap-01/01-services-api-http.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Services et API $http
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="chap-01/02-service-resource.html">
+                            
+                            <a href="../chap-01/02-service-resource.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Service $resource
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="chap-01/03-refactoring.html">
+                            
+                            <a href="../chap-01/03-refactoring.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Pourquoi faire compliqué
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="chap-01/04-ihm.html">
+                            
+                            <a href="../chap-01/04-ihm.html">
+                                <i class="fa fa-check"></i> <b>2.4.</b> Un peu d&#39;ihm et de formulaire
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="chap-outils/README.html">
+                
+                <a href="../chap-outils/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Les outils et frameworks autour d&#39;Angular
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 90.9090909090909%;min-width: 81.81818181818181%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chap-00/README.html" title="1ers pas" class="chapter done new-chapter" data-progress="1" style="left: 9.090909090909092%;"></a>
+    
+        <a href="../chap-00/01-preparation.html" title="Préparation" class="chapter done " data-progress="1.1" style="left: 18.181818181818183%;"></a>
+    
+        <a href="../chap-00/02-architecture-minimale.html" title="Architecture minimale" class="chapter done " data-progress="1.2" style="left: 27.272727272727273%;"></a>
+    
+        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter done " data-progress="1.3" style="left: 36.36363636363637%;"></a>
+    
+        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter done " data-progress="1.4" style="left: 45.45454545454545%;"></a>
+    
+        <a href="../chap-01/README.html" title="Jouer avec le serveur" class="chapter done new-chapter" data-progress="2" style="left: 54.54545454545455%;"></a>
+    
+        <a href="../chap-01/01-services-api-http.html" title="Services et API $http" class="chapter done " data-progress="2.1" style="left: 63.63636363636363%;"></a>
+    
+        <a href="../chap-01/02-service-resource.html" title="Service $resource" class="chapter done " data-progress="2.2" style="left: 72.72727272727273%;"></a>
+    
+        <a href="../chap-01/03-refactoring.html" title="Pourquoi faire compliqué" class="chapter done " data-progress="2.3" style="left: 81.81818181818181%;"></a>
+    
+        <a href="../chap-01/04-ihm.html" title="Un peu d&#39;ihm et de formulaire" class="chapter done " data-progress="2.4" style="left: 90.9090909090909%;"></a>
+    
+        <a href="../chap-outils/README.html" title="Les outils et frameworks autour d&#39;Angular" class="chapter  new-chapter" data-progress="3" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_11">
+                    
+                        <h1 id="un-peu-d-ihm-et-de-formulaire">Un peu d&#39;ihm et de formulaire</h1>
+<p>Mon application est plutôt &quot;moche&quot; donc nous allons un peu travailler sur le code HTML.</p>
+<h2 id="mais-d-abord-le-contr-leur">Mais d&#39;abord le contrôleur</h2>
+<p>Pour pouvoir interagir bien mieux avec l&#39;IHM je vous propose d&#39;ajouter quelques méthodes à notre contrôleur.</p>
+<p><strong><code>selectBook()</code></strong>: je veux pouvoir sélectionner un livre dans la liste</p>
+<pre><code class="lang-javascript">$scope.selectBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+  $scope.book = book;
+}
+</code></pre>
+<p><strong><code>saveBook()</code></strong>: je fais un update si mon livre a une propriété <code>_id</code> renseignée, sinon c&#39;est une création</p>
+<pre><code class="lang-javascript">$scope.saveBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+  book._id !== <span class="hljs-literal">undefined</span> ? $scope.updateBook(book) : $scope.createBook(book);
+}
+</code></pre>
+<p><strong><code>newBook()</code></strong>: je créée un livre &quot;vide&quot; (cela me servira à vider mon formulaire)</p>
+<pre><code class="lang-javascript">$scope.newBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  $scope.book = {};
+}
+</code></pre>
+<h2 id="on-peut-passer-l-ihm">On peut passer à l&#39;IHM</h2>
+<p>Pour une fois, je ne vais pas utiliser <strong>Bootstrap</strong> mais <strong>UIkit</strong> <a href="http://www.getuikit.com/" target="_blank">http://www.getuikit.com/</a> que je trouve assez joli (et j&#39;avais envie de changer un peu).</p>
+<p>Donc dans notre fichier <code>bower.json</code>, nous ajoutons une ligne pour UIkit:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;books&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;angular&quot; : &quot;1.2.16&quot;,
+    &quot;angular-resource&quot; : &quot;1.2.16&quot;,
+    &quot;uikit&quot; : &quot;2.6.0&quot;
+  }
+}
+</code></pre><p>Ensuite vous faite un <code>bower update</code> dans votre console/terminal. Et vous êtes prêts à refaire la page <code>index.html</code> (dans <code>/public</code>). Vous pouvez tout supprimer, nous allons reprendre tout le code html.</p>
+<p><strong>Voici la nouvelle structure de votre page</strong>:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>livres<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"bower_components/uikit/dist/css/uikit.almost-flat.min.css"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"booksApp"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"padding: 10px"</span>&gt;</span> <span class="hljs-comment">&lt;!-- on n'oublie pas la directive ng-app --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-container uk-container-center"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-grid"</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"MainCtrl"</span>&gt;</span> <span class="hljs-comment">&lt;!-- on n'oublie pas la directive ng-controller --&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-width-4-10"</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- FORMULAIRE : Ici nous aurons notre formulaire de saisie --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-width-6-10"</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- GRILLE : Ici nous aurons la liste des livres --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular/angular.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular-resource/angular-resource.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p><strong>Le formulaire</strong>: à l&#39;endroit où il y a le commentaire <code>&lt;!-- FORMULAIRE : Ici nous aurons notre formulaire de saisie --&gt;</code>, insérez le code suivant:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel-title"</span>&gt;</span>Formulaire Livre<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-form"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"bookForm"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.title"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"titre du film"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.description"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"description du film"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.level"</span>
+              <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"level for level in levels"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book"</span>&gt;</span>{{book._id}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"newBook()"</span>&gt;</span>Nouveau<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"saveBook(book)"</span>&gt;</span>Valider (ajout ou modification)<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"deleteBook(book._id)"</span>&gt;</span>Supprimer<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+      <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Nous retrouvons bien:</p>
+<ul>
+<li>les directives <code>ng-model</code> dans les tag <code>&lt;input&gt;</code> et <code>&lt;select&gt;</code> pour fair le lien avec le modèle <code>book</code></li>
+<li>j&#39;ai ajouté : <code>&lt;p ng-model=&quot;book&quot;&gt;{{book._id}}&lt;/p&gt;</code> pour afficher l&#39;id du livre quand il existe (donc quand il a déjà été sauvegardé en base).</li>
+</ul>
+<p>Nous avons ensuite une liste de liens:</p>
+<ul>
+<li><code>&lt;a href=&quot;#&quot; ng-click=&quot;newBook()&quot;&gt;Nouveau&lt;/a&gt;</code> qui permet de &quot;vider&quot; notre formulaire en appelant la nouvelle méthode <code>newBook()</code> de notre contrôleur</li>
+<li><code>&lt;a href=&quot;#&quot; ng-click=&quot;saveBook(book)&quot;&gt;Valider (ajout ou modification)&lt;/a&gt;</code> qui permet d&#39;appeler la nouvelle méthode <code>saveBook(book)</code> de notre contrôleur en lui passant les valeurs de <code>book</code> (lié au formulaire), et qui déterminera en fonction de la présence ou non d&#39;un id si c&#39;est une modification ou un ajout</li>
+<li><code>&lt;a href=&quot;#&quot; ng-click=&quot;deleteBook(book._id)&quot;&gt;Supprimer&lt;/a&gt;</code> pour supprimer le livre sélectionné</li>
+</ul>
+<p><strong>La grille (ou table) des livres</strong>: à l&#39;endroit où il y a le commentaire <code>&lt;!-- GRILLE : Ici nous aurons la liste des livres --&gt;</code>, insérez le code suivant:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel-title"</span>&gt;</span>Liste des Livres<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-table uk-table-hover"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Titre<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Niveau<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>id<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"book in books"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"selectBook(book)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{book.title}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{book.description}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{book.level}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{book._id}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Nous avons toujours notre directive <code>ng-repeat=&quot;book in books&quot;</code>qui va nous permettre d&#39;ajouter autant de lignes(rows) ou <code>&lt;tr&gt;</code> dans notre grille ou <code>&lt;table&gt;</code>.
+Ainsi que <code>ng-click=&quot;selectBook(book)&quot;</code> qui permettra ainsi d&#39;afficher le livre dans le formulaire si on clique sur la ligne correspondante.</p>
+<p>Donc si ce n&#39;est déjà fait, relancez votre application côté serveur et connectez vous sur votre splendide &quot;Single Page Application&quot; de gestion de livre, et jouez avec:</p>
+<p><img src="images/ang-form-01.png" height="70%" width="70%"></p>
+<p>Vous allez rapidement vous apercevoir que vous pouvez ajouter des livres &quot;vides&quot;, c&#39;est moche!</p>
+<p><img src="images/ang-form-02.png" height="70%" width="70%"></p>
+<p>Nous avons donc un prétexte pour regarder comment fonctionne le contrôle de saisie avec Angular (il faudrait aussi modifier côté serveur notre API pour empêcher d&#39;avoir un livre &quot;vide&quot;).</p>
+<p>Nous allons voir une infime partie des possibilités proposées par Angular, mais déjà bien pratique. Pour aller plus loin, vous pouvez commencer par ceci <a href="https://docs.angularjs.org/api/ng/type/form.FormController" target="_blank">https://docs.angularjs.org/api/ng/type/form.FormController</a> et <a href="https://docs.angularjs.org/guide/forms" target="_blank">https://docs.angularjs.org/guide/forms</a>.</p>
+<h2 id="validation">Validation</h2>
+<p>Nous avions le formulaire suivant:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-form"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"bookForm"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.title"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"titre du film"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.description"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"description du film"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.level"</span>
+          <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"level for level in levels"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book"</span>&gt;</span>{{book._id}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"newBook()"</span>&gt;</span>Nouveau<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"saveBook(book)"</span>&gt;</span>Valider (ajout ou modification)<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"deleteBook(book._id)"</span>&gt;</span>Supprimer<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+<p>Vous pouvez noter que le formulaire a un nom <code>name=&quot;bookForm&quot;</code> et que le champ de saisie des titres a lui aussi un nom <code>name=&quot;title&quot;</code>. Cela va nous servir à tester la validité de notre saisie. Modifions notre formulaire comme suit:</p>
+<p>On ajoute l&#39;attribut <code>novalidate</code> au tag <code>&lt;form&gt;&lt;/form&gt;</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-form"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"bookForm"</span> <span class="hljs-attribute">novalidate</span>&gt;</span>
+</code></pre>
+<p><em>Comme cela on n&#39;utilise pas les messages d&#39;erreurs natifs</em></p>
+<p>On ajoute l&#39;attribut <code>required</code> au champ de saisie des titres:</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.title"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"titre du film"</span> <span class="hljs-attribute">required</span>&gt;</span>
+</code></pre>
+<p>Ensuite on ajoute un message qui n&#39;apparaîtra que si le champ de saisie de titre est vide:</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-show</span>=<span class="hljs-value">"bookForm.title.$error.required"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-text-warning"</span>&gt;</span>Champs obligatoire<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+<p>Cette partie là reste inchangée:</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.description"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"description du film"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book.level"</span>
+          <span class="hljs-attribute">ng-options</span>=<span class="hljs-value">"level for level in levels"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"book"</span>&gt;</span>{{book._id}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<p>Remplaçons nos liens par des boutons et précisons pour le bouton de sauvegarde qu&#39;il n&#39;est actif uniquement si les données du formulaire sont valide avec l&#39;attribut : <code>ng-disabled=&quot;bookForm.$invalid&quot;</code>:</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-button"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"newBook()"</span>&gt;</span>Nouveau<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-button uk-button-primary"</span> <span class="hljs-attribute">ng-disabled</span>=<span class="hljs-value">"bookForm.$invalid"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"saveBook(book)"</span>&gt;</span>Valider (ajout ou modification)<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-button uk-button-danger"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"deleteBook(book._id)"</span>&gt;</span>Supprimer<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span> |
+  <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+<p>Sauvegardez, relancez et vérifiez que cela fonctionne:</p>
+<p><img src="images/ang-form-03.png" height="80%" width="80%"></p>
+<p><img src="images/ang-form-04.png" height="80%" width="80%"></p>
+<p>Simple et pratique.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chap-01/03-refactoring.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chap-outils/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"UA-11383603-13"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

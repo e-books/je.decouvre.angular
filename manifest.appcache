@@ -1,17 +1,19 @@
 CACHE MANIFEST
-# Revision 1400673976497
+# Revision 1400928730077
 
 CACHE:
 index.html
 chap-00/01-preparation.html
-chap-00/02-architecture-minimale.html
 chap-00/03-ajouter-un-formulaire.html
 chap-00/04-utiliser-une-factory.html
+chap-00/02-architecture-minimale.html
 chap-00/README.html
-chap-01/01-services-api-http.html
 chap-01/02-service-resource.html
+chap-01/01-services-api-http.html
 chap-01/03-refactoring.html
+chap-01/04-ihm.html
 chap-01/README.html
+chap-outils/README.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
 gitbook/fonts/anonymouspro/400i.woff
@@ -49,8 +51,8 @@ gitbook/jsrepl/sandbox.js
 gitbook/print.css
 gitbook/style.css
 gitbook/plugins/gitbook-plugin-ga/plugin.js
-gitbook/plugins/gitbook-plugin-mathjax/plugin.js
 gitbook/plugins/gitbook-plugin-mixpanel/plugin.js
+gitbook/plugins/gitbook-plugin-mathjax/plugin.js
 
 NETWORK:
 *
