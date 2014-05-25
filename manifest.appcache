@@ -1,18 +1,20 @@
 CACHE MANIFEST
-# Revision 1400928730077
+# Revision 1401003034887
 
 CACHE:
 index.html
 chap-00/01-preparation.html
-chap-00/03-ajouter-un-formulaire.html
-chap-00/04-utiliser-une-factory.html
 chap-00/02-architecture-minimale.html
+chap-00/04-utiliser-une-factory.html
+chap-00/03-ajouter-un-formulaire.html
 chap-00/README.html
-chap-01/02-service-resource.html
 chap-01/01-services-api-http.html
+chap-01/02-service-resource.html
 chap-01/03-refactoring.html
-chap-01/04-ihm.html
 chap-01/README.html
+chap-02/01-ihm.html
+chap-02/02-filters.html
+chap-02/README.html
 chap-outils/README.html
 gitbook/app.js
 gitbook/fonts/anonymouspro/400.woff
