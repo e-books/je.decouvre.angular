@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# Revision 1401003034887
+# Revision 1401003292993
 
 CACHE:
 index.html
 chap-00/01-preparation.html
 chap-00/02-architecture-minimale.html
-chap-00/04-utiliser-une-factory.html
 chap-00/03-ajouter-un-formulaire.html
+chap-00/04-utiliser-une-factory.html
 chap-00/README.html
 chap-01/01-services-api-http.html
 chap-01/02-service-resource.html
