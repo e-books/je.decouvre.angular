@@ -12,6 +12,7 @@
 * [Améliorer l'IHM](chap-02/README.md)
     * [Un peu d'ihm et de formulaire](chap-02/01-ihm.md)
     * [Filter et Filters](chap-02/02-filters.md)
+    * [Inclusion d'html](chap-02/03-include.md)
 * [Les outils et frameworks autour d'Angular](chap-outils/README.md)
 
 
