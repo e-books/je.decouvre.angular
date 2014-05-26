@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="e-books/je.decouvre.angular" data-level="3.3" data-basepath=".." data-revision="1401116800666">
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="3.3" data-basepath=".." data-revision="1401131269297">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -457,6 +457,7 @@
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel"</span> <span class="hljs-attribute">ng-include</span>=<span class="hljs-value">"'books/booksList.html'"</span> <span class="hljs-attribute">onload</span>=<span class="hljs-value">"whenListIsLoaded()"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
 <p>Angular, toujours à partir de <code>ng-include</code> ira aussi charger <code>books/booksList.html</code>et lancera grâce à <code>onload</code> la méthode <code>whenListIsLoaded()</code>du contrôleur (il faudra créer la méthode, mais <code>onload</code> n&#39;est pas obligatoire).</p>
+<p><strong>Remarque importante</strong>: avez vous vu que j&#39;ai mis les paths vers les templates html entre simples quotes avant de les mettre entre doubles quotes : c&#39;est pour éviter à Angular d&#39;évaluer la directive.</p>
 <p>Donc le code définitif de <code>index.html</code> devrait être le suivant:</p>
 <pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
