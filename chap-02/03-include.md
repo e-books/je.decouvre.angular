@@ -34,7 +34,7 @@ Créez donc dans `/public` un répertoire `books` avec 2 fichiers html à l'int�
 
 Dans votre page `index.html` extrayez complètement le code correspondant à votre formulaire pour le coller dans `bookForm.html`. Le contenu de `bookForm.html` devrait être celui-ci:
 
-{% highlight html %}
+```html
 <h3 class="uk-panel-title">Formulaire Livre</h3>
 
 <form class="uk-form" name="bookForm" novalidate>
@@ -46,7 +46,7 @@ Dans votre page `index.html` extrayez complètement le code correspondant à vot
   <select ng-model="book.level"
           ng-options="level for level in levels">
   </select>
-  <p ng-model="book">{% raw %}{{book._id}}{% endraw %}</p>
+  <p ng-model="book">{{book._id}}</p>
 
   <hr>
   <button class="uk-button" ng-click="newBook()">Nouveau</button> |
@@ -55,11 +55,11 @@ Dans votre page `index.html` extrayez complètement le code correspondant à vot
   <hr>
 
 </form>
-{% endhighlight %}
+```
 
 Ensuite, toujours de votre page `index.html` extrayez complètement le code correspondant à votre liste de livre pour le coller dans `booksList.html`. Le contenu de `booksList.html` devrait être celui-ci:
 
-{% highlight html %}
+```html
 <h3 class="uk-panel-title">Liste des Livres</h3>
 
 <form class="uk-form">
@@ -84,18 +84,18 @@ Ensuite, toujours de votre page `index.html` extrayez complètement le code corr
   <tbody ng-repeat="book in books | filter:search:strict" ng-click="selectBook(book)">
 
   <tr>
-    <td>{% raw %}{{book.title}}{% endraw %}</td>
-    <td>{% raw %}{{book.description}}{% endraw %}</td>
-    <td>{% raw %}{{book.level | stars}}{% endraw %}</td>
-    <td>{% raw %}{{book._id}}{% endraw %}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.description}}</td>
+    <td>{{book.level | stars}}</td>
+    <td>{{book._id}}</td>
   </tr>
   </tbody>
 </table>
-{% endhighlight %}
+```
 
 Du coup, votre page `index.html` devrait ressembler à ceci:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -134,49 +134,49 @@ Du coup, votre page `index.html` devrait ressembler à ceci:
 
   </body>
 </html>
-{% endhighlight %}
+```
 
 Alors c'est tout de suite plus propre, mais ça marche forcément beaucoup moins bien ...
 
 ##La "magie" avec Angular
 
-Nous devons juste nous contenter d'expliquer à Angular où sont `booksList.html` et `booksList.html`. Et pour cela la directive `ng-include` va grandement nous faciliter la vie. Pour cela,
+Nous devons juste nous contenter d'expliquer à Angular où sont `bookForm.html` et `booksList.html`. Et pour cela la directive `ng-include` va grandement nous faciliter la vie. Pour cela,
 
 Remplacez:
 
-{% highlight html %}
+```html
 <div class="uk-panel">
   <!-- ici il y avait la saisie des livres -->
 </div>
-{% endhighlight %}
+```
 
 par:
 
-{% highlight html %}
+```html
 <div class="uk-panel" ng-include="'books/bookForm.html'" onload="whenFormIsLoaded()"></div>
-{% endhighlight %}
+```
 
 Angular à partir de `ng-include` ira charger `books/bookForm.html`et lancera grâce à `onload` la méthode `whenFormIsLoaded()`du contrôleur (il faudra créer la méthode, mais `onload` n'est pas obligatoire).
 
 Puis remplacez:
 
-{% highlight html %}
+```html
 <div class="uk-panel">
   <!-- ici il y avait la liste des livres -->
 </div>
-{% endhighlight %}
+```
 
 par:
 
-{% highlight html %}
+```html
 <div class="uk-panel" ng-include="'books/booksList.html'" onload="whenListIsLoaded()"></div>
-{% endhighlight %}
+```
 
-Angular à partir de `ng-include` ira charger `books/booksList.html`et lancera grâce à `onload` la méthode `whenListIsLoaded()`du contrôleur (il faudra créer la méthode, mais `onload` n'est pas obligatoire).
+Angular, toujours à partir de `ng-include` ira aussi charger `books/booksList.html`et lancera grâce à `onload` la méthode `whenListIsLoaded()`du contrôleur (il faudra créer la méthode, mais `onload` n'est pas obligatoire).
 
 Donc le code définitif de `index.html` devrait être le suivant:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -211,6 +211,6 @@ Donc le code définitif de `index.html` devrait être le suivant:
 
   </body>
 </html>
-{% endhighlight %}
+```
 
 Il ne vous reste plus qu'à tester. Je vous laisse imaginer comment cela va être facile de modulariser vos projets et de vous en faciliter la maintenance.
