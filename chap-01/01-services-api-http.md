@@ -210,7 +210,7 @@ app.get("/books", function(req, res) {
 });
 ```
 
-Et nous utilisons l'API `$http` dans la méthode `$scope.createBook` pour faire une requête de type `GET` sur l'uri `books`, ce qui aura pour effet d'appeler la route Express définie plus haut par :
+Et nous utilisons l'API `$http` dans la méthode `$scope.createBook` pour faire une requête de type `POST` sur l'uri `books`, ce qui aura pour effet d'appeler la route Express définie plus haut par :
 
 ```javascript
 // Ajouter un livre
