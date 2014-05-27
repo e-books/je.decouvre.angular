@@ -35,7 +35,7 @@ Ok, rien de mieux qu'un exemple, alors.
 
 ##Modifions légèrement notre IHM
 
-Modifion `index.html` comme suit:
+Modifions `index.html` comme suit:
 
 ```html
 <!DOCTYPE html>
