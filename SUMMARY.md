@@ -13,6 +13,7 @@
     * [Un peu d'ihm et de formulaire](chap-02/01-ihm.md)
     * [Filter et Filters](chap-02/02-filters.md)
     * [Inclusion d'html](chap-02/03-include.md)
+    * [Utilisation d'un routeur](chap-02/04-router.md)
 * [Les outils et frameworks autour d'Angular](chap-outils/README.md)
 
 
