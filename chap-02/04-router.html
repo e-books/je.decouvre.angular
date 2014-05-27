@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Utilisation d&#39;un routeur | Je découvre Angular</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="e-books">
+        <meta name="description" content="![Alt &quot;angularjs.png&quot;](angularjs.png)">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../chap-outils/README.html" />
+        
+        
+        <link rel="prev" href="../chap-02/03-include.html" />
+        
+
+        <meta property="og:title" content="Utilisation d&#39;un routeur | Je découvre Angular">
+        <meta property="og:site_name" content="Je découvre Angular">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/e-books">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="3.4" data-basepath=".." data-revision="1401215939637">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/e-books/je.decouvre.angular" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/e-books/je.decouvre.angular/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/e-books/je.decouvre.angular/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Je découvre Angular</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/e-books" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-02/04-router.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="chap-00/README.html">
+                
+                <a href="../chap-00/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> 1ers pas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="chap-00/01-preparation.html">
+                            
+                            <a href="../chap-00/01-preparation.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Préparation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="chap-00/02-architecture-minimale.html">
+                            
+                            <a href="../chap-00/02-architecture-minimale.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Architecture minimale
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="chap-00/03-ajouter-un-formulaire.html">
+                            
+                            <a href="../chap-00/03-ajouter-un-formulaire.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="chap-00/04-utiliser-une-factory.html">
+                            
+                            <a href="../chap-00/04-utiliser-une-factory.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Factory
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="chap-01/README.html">
+                
+                <a href="../chap-01/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Jouer avec le serveur
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="chap-01/01-services-api-http.html">
+                            
+                            <a href="../chap-01/01-services-api-http.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Services et API $http
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="chap-01/02-service-resource.html">
+                            
+                            <a href="../chap-01/02-service-resource.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Service $resource
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="chap-01/03-refactoring.html">
+                            
+                            <a href="../chap-01/03-refactoring.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Pourquoi faire compliqué
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="chap-02/README.html">
+                
+                <a href="../chap-02/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Améliorer l&#39;IHM
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="chap-02/01-ihm.html">
+                            
+                            <a href="../chap-02/01-ihm.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Un peu d&#39;ihm et de formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="chap-02/02-filters.html">
+                            
+                            <a href="../chap-02/02-filters.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Filter et Filters
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="chap-02/03-include.html">
+                            
+                            <a href="../chap-02/03-include.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> Inclusion d&#39;html
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="chap-02/04-router.html">
+                            
+                            <a href="../chap-02/04-router.html">
+                                <i class="fa fa-check"></i> <b>3.4.</b> Utilisation d&#39;un routeur
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="chap-outils/README.html">
+                
+                <a href="../chap-outils/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Les outils et frameworks autour d&#39;Angular
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 93.33333333333333%;min-width: 86.66666666666667%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chap-00/README.html" title="1ers pas" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="../chap-00/01-preparation.html" title="Préparation" class="chapter done " data-progress="1.1" style="left: 13.333333333333334%;"></a>
+    
+        <a href="../chap-00/02-architecture-minimale.html" title="Architecture minimale" class="chapter done " data-progress="1.2" style="left: 20%;"></a>
+    
+        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter done " data-progress="1.3" style="left: 26.666666666666668%;"></a>
+    
+        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter done " data-progress="1.4" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../chap-01/README.html" title="Jouer avec le serveur" class="chapter done new-chapter" data-progress="2" style="left: 40%;"></a>
+    
+        <a href="../chap-01/01-services-api-http.html" title="Services et API $http" class="chapter done " data-progress="2.1" style="left: 46.666666666666664%;"></a>
+    
+        <a href="../chap-01/02-service-resource.html" title="Service $resource" class="chapter done " data-progress="2.2" style="left: 53.333333333333336%;"></a>
+    
+        <a href="../chap-01/03-refactoring.html" title="Pourquoi faire compliqué" class="chapter done " data-progress="2.3" style="left: 60%;"></a>
+    
+        <a href="../chap-02/README.html" title="Améliorer l&#39;IHM" class="chapter done new-chapter" data-progress="3" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../chap-02/01-ihm.html" title="Un peu d&#39;ihm et de formulaire" class="chapter done " data-progress="3.1" style="left: 73.33333333333333%;"></a>
+    
+        <a href="../chap-02/02-filters.html" title="Filter et Filters" class="chapter done " data-progress="3.2" style="left: 80%;"></a>
+    
+        <a href="../chap-02/03-include.html" title="Inclusion d&#39;html" class="chapter done " data-progress="3.3" style="left: 86.66666666666667%;"></a>
+    
+        <a href="../chap-02/04-router.html" title="Utilisation d&#39;un routeur" class="chapter done " data-progress="3.4" style="left: 93.33333333333333%;"></a>
+    
+        <a href="../chap-outils/README.html" title="Les outils et frameworks autour d&#39;Angular" class="chapter  new-chapter" data-progress="4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_15">
+                    
+                        <p>Utilisation d&#39;un routeur</p>
+<p>J&#39;aimerais pouvoir afficher au choix, dans ma webapp, les actualités ou les &quot;coups de cœur&quot; en cliquant sur un lien et ça sans recharger ma page et sans que l&#39;état des autres composants ne soient impactés (mon formulaire de saisie ou ma liste de livres).</p>
+<p>Pour cela il existe dans Angular le composant <code>nRoute</code> et nous allons voir comment nous en servir.</p>
+<h2 id="pr-paration">Préparation</h2>
+<p>Nous avons besoin d&#39;une nouvelle dépendance : <code>angular-route.min.js</code></p>
+<p>Donc modifiez votre fichier <code>bower.json</code> de la manière suivante:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;books&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;angular&quot; : &quot;1.2.16&quot;,
+    &quot;angular-resource&quot; : &quot;1.2.16&quot;,
+    &quot;angular-route&quot;: &quot;1.2.16&quot;,
+    &quot;uikit&quot; : &quot;2.6.0&quot;
+  }
+}
+</code></pre><p>Et lancez la commande <code>bower update</code> pour télécharger dans votre projet <code>angular-route</code>.</p>
+<p>Ensuite dans la page <code>index.html</code> ajoutez en bas de page avec les autres définitions de script, la définition suivante:</p>
+<pre><code>&lt;script src=&quot;bower_components/angular-route/angular-route.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h3 id="qu-est-qu-un-routeur-selon-angular-">Qu&#39;est qu&#39;un routeur selon Angular?</h3>
+<p>Un routeur dans Angular est un composant qui est capable de détecter la modification d&#39;une url par une saisie dans la zone d&#39;url du navigateur ou par le biais d&#39;un click sur un lien et de déclencher une action en fonction et mettre à jour le chargement d&#39;une vue par le biais de la directive <code>ng-view</code>. C&#39;est à dire, si vous avez dans votre page html un tag comme celui-ci <code>&lt;div ng-view&gt;&lt;/div&gt;</code>, le routeur pourra non seulement déclencher une action, mais aussi charger un template à l&#39;intérieur de ce tag (de la même manière que la directive <code>ng-include</code>). Pas clair?</p>
+<p>Ok, rien de mieux qu&#39;un exemple, alors.</p>
+<h2 id="modifions-l-g-rement-notre-ihm">Modifions légèrement notre IHM</h2>
+<p>Modifion <code>index.html</code> comme suit:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>livres<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"bower_components/uikit/dist/css/uikit.almost-flat.min.css"</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"booksApp"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"padding: 10px"</span>&gt;</span>
+</code></pre>
+<p>Insérez la liste ci-dessous :</p>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-breadcrumb"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#/actualites"</span>&gt;</span>Actualités<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#/coupsdecoeur"</span>&gt;</span>Coup de coeur<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><strong>Remarquez</strong> de quelle manière sont renseignées les attributs <code>href</code> : on fait précéder l&#39;url par <code>#/</code>.</p>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-container uk-container-center"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-grid"</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"MainCtrl"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-width-4-10"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel"</span> <span class="hljs-attribute">ng-include</span>=<span class="hljs-value">"'books/bookForm.html'"</span> <span class="hljs-attribute">onload</span>=<span class="hljs-value">"whenFormIsLoaded()"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-width-6-10"</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"uk-panel"</span> <span class="hljs-attribute">ng-include</span>=<span class="hljs-value">"'books/booksList.html'"</span> <span class="hljs-attribute">onload</span>=<span class="hljs-value">"whenListIsLoaded()"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><strong>Ajoutez</strong> cette balise:</p>
+<pre><code class="lang-html">      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-view</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Et le <strong>reste</strong> ne change pas:</p>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular/angular.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular-resource/angular-resource.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular-route/angular-route.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<h2 id="notre-1er-routeur">Notre 1er routeur</h2>
+<h3 id="-ngroute-"><code>ngRoute</code></h3>
+<p>Commençons par ajouter la dépendance <code>ngRoute</code> à notre module principal</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> booksApp = angular.module(<span class="hljs-string">"booksApp"</span>, [<span class="hljs-string">"ngResource"</span>, <span class="hljs-string">"ngRoute"</span>]);
+</code></pre>
+<p>Puis définissons notre routeur et son fonctionnement avec la méthode <code>config</code> de notre module principal en lui passant en paramètre <code>$routeProvider</code>:</p>
+<pre><code class="lang-javascript">booksApp.config([<span class="hljs-string">"$routeProvider"</span>,
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($routeProvider)</span> {</span>
+
+    $routeProvider.
+      when(<span class="hljs-string">'/actualites'</span>, {
+        templateUrl: <span class="hljs-string">"templates/actualites.html"</span>,
+        controller: <span class="hljs-string">"ActualitesCtrl"</span>
+      })
+      .when(<span class="hljs-string">'/coupsdecoeur'</span>, {
+        templateUrl: <span class="hljs-string">"templates/coupsdecoeur.html"</span>,
+        controller: <span class="hljs-string">"CoupsDeCoeurCtrl"</span>
+      })
+      .otherwise({
+        redirectTo: <span class="hljs-string">"/"</span>
+      })
+
+  }
+]);
+</code></pre>
+<p><strong>Que venons nous de faire?</strong> A chaque fois que je cliquerais sur <code>&lt;a href=&quot;#/actualites&quot;&gt;Actualités&lt;/a&gt;</code> le fichier <code>&quot;templates/actualites.html&quot;</code> sera chargé dans <code>&lt;div ng-view&gt;&lt;/div&gt;</code>et le contrôleur <code>&quot;ActualitesCtrl&quot;</code> sera appelé.
+De la même manière, lorsque je cliquerais sur <code>&lt;a href=&quot;#/coupsdecoeur&quot;&gt;Coup de coeur&lt;/a&gt;</code>le fichier <code>&quot;templates/coupsdecoeur.html&quot;</code> sera chargé dans <code>&lt;div ng-view&gt;&lt;/div&gt;</code>et le contrôleur <code>&quot;CoupsDeCoeurCtrl&quot;</code> sera appelé.</p>
+<p><strong>A noter</strong>: si dans la barre d&#39;url du navigateur vous saisissez <a href="http://localhost:3000/#/actualites" target="_blank">http://localhost:3000/#/actualites</a> ou <a href="http://localhost:3000/#/coupsdecoeur" target="_blank">http://localhost:3000/#/coupsdecoeur</a>, les actions décrites ci-dessus seront déclenchées de la même façon (sans rechargement de page), ce qui vous permet de bookmarquer l&#39;état de votre webapp (par exemple, avoir un lien direct sur l&#39;état qui affiche les actualités).</p>
+<h2 id="d-finissons-nos-templates">Définissons nos templates</h2>
+<p>Créez un sous-répertoire <code>templates</code> avec 2 fichiers <code>actualites.html</code> et <code>coupsdecoeur.html</code>:</p>
+<pre><code>votre_projet/
+├── public/
+|   ├── bower_components/ /* angular est par ici */
+|   ├── js/
+|   |    └── main.js
+|   ├── books/
+|   |    ├── bookForm.html
+|   |    └── booksList.html
+|   ├── templates/
+|   |    ├── actualites.html
+|   |    └── coupsdecoeur.html
+|   └── index.html
+|
+</code></pre><p>Avec les contenus suivants:</p>
+<h3 id="-actualites-html-"><code>actualites.html</code></h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>{% raw %}{{title}}{% endraw %}<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"new in news"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>{% raw %}{{new.title}}{% endraw %}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+<h3 id="-coupsdecoeur-html-"><code>coupsdecoeur.html</code></h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>{% raw %}{{title}}{% endraw %}<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"item in items"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>{% raw %}{{item.title}}{% endraw %}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+<p>Et enfin, ...</p>
+<h2 id="-crivons-les-routeurs-correspondants">Écrivons les routeurs correspondants</h2>
+<p>Donc dans <code>/public/js/main.js</code>, ajoutons les contrôleurs suivants</p>
+<h3 id="-actualitesctrl-"><code>ActualitesCtrl</code></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ActualitesCtrl = booksApp.controller(<span class="hljs-string">"ActualitesCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
+  $scope.title = <span class="hljs-string">"Actualités"</span>;
+  $scope.news = [
+      { title:<span class="hljs-string">"Un nouveau Stephen King à venir?"</span> }
+    , { title:<span class="hljs-string">"Le Kindle paperwhite est juste une turie"</span> }
+    , { title:<span class="hljs-string">"Le format epub 3 en détail"</span> }
+  ];
+});
+</code></pre>
+<h3 id="-coupsdecoeurctrl-"><code>CoupsDeCoeurCtrl</code></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> CoupsDeCoeurCtrl = booksApp.controller(<span class="hljs-string">"CoupsDeCoeurCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope)</span> {</span>
+  $scope.title = <span class="hljs-string">"Coups de Coeur"</span>;
+  $scope.items = [
+      { title:<span class="hljs-string">"Game of Thrones"</span> }
+    , { title:<span class="hljs-string">"Bilbo le Hobbit"</span> }
+    , { title:<span class="hljs-string">"Le sorcier de TerreMère"</span> }
+  ];
+});
+</code></pre>
+<p>Vous pouvez maintenant tester votre webapp:</p>
+<p><img src="images/ang-routeur-01.png" height="70%" width="70%"></p>
+<p><img src="images/ang-routeur-02.png" height="70%" width="70%"></p>
+<h2 id="passer-des-param-tres-aux-urls">Passer des paramètres aux urls</h2>
+<p>Il est tout à fait possible de passer des paramètres via l&#39;url. Par exemple, ajoutez la route suivante au routeur:</p>
+<pre><code class="lang-javascript">.when(<span class="hljs-string">'/addition/:a/:b'</span>, {
+    templateUrl: <span class="hljs-string">"templates/addition.html"</span>,
+    controller: <span class="hljs-string">"AdditionCtrl"</span>
+})
+</code></pre>
+<p>Créez le contrôleur <code>AdditionCtrl</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AdditionCtrl = booksApp.controller(<span class="hljs-string">"AdditionCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope, $routeParams)</span> {</span>
+  $scope.result = <span class="hljs-built_in">parseInt</span>($routeParams[<span class="hljs-string">'a'</span>]) + <span class="hljs-built_in">parseInt</span>($routeParams[<span class="hljs-string">'b'</span>]);
+});
+</code></pre>
+<p>Créez rapidement un template <code>templates/addition.html</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>{% raw %}{{result}}{% endraw %}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+</code></pre>
+<p>Maintenant vous pouvez faire des additions de cette manière : <a href="http://localhost:3000/#/addition/5/60" target="_blank">http://localhost:3000/#/addition/5/60</a></p>
+<p>Alors je trouve quelques limitations à ce routeur, j&#39;aurais aimé pouvoir utiliser plusieurs routeurs et plusieurs <code>ng-view</code>, mais je pense qu&#39;il faut que j&#39;apprenne encore à l&#39;utiliser. J&#39;ai vu qu&#39;il existait des directives angular dans des projets externes qui le permettait. Nous le verrons peut-être plus tard.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chap-02/03-include.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chap-outils/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"UA-11383603-13"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
