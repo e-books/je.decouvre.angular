@@ -1,4 +1,4 @@
-Utilisation d'un routeur
+#Utilisation d'un routeur
 
 J'aimerais pouvoir afficher au choix, dans ma webapp, les actualités ou les "coups de cœur" en cliquant sur un lien et ça sans recharger ma page et sans que l'état des autres composants ne soient impactés (mon formulaire de saisie ou ma liste de livres).
 
