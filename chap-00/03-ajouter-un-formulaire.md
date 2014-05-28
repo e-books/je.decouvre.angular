@@ -109,9 +109,9 @@ Puis ajouter un bouton (`<a href="#" ng-click="createBook()">Ajouter un livre</a
 </div>
 ```
 
-Le bouton est un lien (pourquoi pas?) avec une directive `ng-click="createBook()"` qui permettra d'appeler la méthode `createBook()` de notre contrôleur lorsque l'on clique sur le lien et d'ajouter un nouveau livre que vous pourrez ensuite modifier (ok mon workflow n'est pas forcément au top mais ça vous donne l'idée).
+Le bouton est un lien (pourquoi pas ?) avec une directive `ng-click="createBook()"` qui permettra d'appeler la méthode `createBook()` de notre contrôleur lorsque l'on clique sur le lien et d'ajouter un nouveau livre que vous pourrez ensuite modifier (ok mon workflow n'est pas forcément au top mais ça vous donne l'idée).
 
 Vous pouvez tester :)
 
-C'est tout pour aujourd'hui. Dans la rubrique suivante je vous montre comment faire "plus propre" en utilisant les **les factories**.
+C'est tout pour aujourd'hui. Dans la rubrique suivante je vous montre comment faire "plus propre" en utilisant les **factories**.
 
