@@ -1,0 +1,728 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Utiliser le pattern module | Je découvre Angular</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="e-books">
+        <meta name="description" content="![Alt &quot;angularjs.png&quot;](angularjs.png)">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../chap-outils/README.html" />
+        
+        
+        <link rel="prev" href="../chap-03/README.html" />
+        
+
+        <meta property="og:title" content="Utiliser le pattern module | Je découvre Angular">
+        <meta property="og:site_name" content="Je découvre Angular">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/e-books">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="e-books/je.decouvre.angular" data-level="4.1" data-basepath=".." data-revision="1401283446143">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/e-books/je.decouvre.angular" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/e-books/je.decouvre.angular/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/e-books/je.decouvre.angular/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Je découvre Angular</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/e-books" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/e-books/je.decouvre.angular/edit/master/chap-03/01-modules.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="chap-00/README.html">
+                
+                <a href="../chap-00/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> 1ers pas
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="chap-00/01-preparation.html">
+                            
+                            <a href="../chap-00/01-preparation.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Préparation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="chap-00/02-architecture-minimale.html">
+                            
+                            <a href="../chap-00/02-architecture-minimale.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Architecture minimale
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="chap-00/03-ajouter-un-formulaire.html">
+                            
+                            <a href="../chap-00/03-ajouter-un-formulaire.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="chap-00/04-utiliser-une-factory.html">
+                            
+                            <a href="../chap-00/04-utiliser-une-factory.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Factory
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="chap-01/README.html">
+                
+                <a href="../chap-01/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Jouer avec le serveur
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="chap-01/01-services-api-http.html">
+                            
+                            <a href="../chap-01/01-services-api-http.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Services et API $http
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="chap-01/02-service-resource.html">
+                            
+                            <a href="../chap-01/02-service-resource.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Service $resource
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="chap-01/03-refactoring.html">
+                            
+                            <a href="../chap-01/03-refactoring.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Pourquoi faire compliqué
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="chap-02/README.html">
+                
+                <a href="../chap-02/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Améliorer l&#39;IHM
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="chap-02/01-ihm.html">
+                            
+                            <a href="../chap-02/01-ihm.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Un peu d&#39;ihm et de formulaire
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="chap-02/02-filters.html">
+                            
+                            <a href="../chap-02/02-filters.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Filter et Filters
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="chap-02/03-include.html">
+                            
+                            <a href="../chap-02/03-include.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> Inclusion d&#39;html
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="chap-02/04-router.html">
+                            
+                            <a href="../chap-02/04-router.html">
+                                <i class="fa fa-check"></i> <b>3.4.</b> Utilisation d&#39;un routeur
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="chap-03/README.html">
+                
+                <a href="../chap-03/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Organiser le projet
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="chap-03/01-modules.html">
+                            
+                            <a href="../chap-03/01-modules.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Utiliser le pattern module
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="chap-outils/README.html">
+                
+                <a href="../chap-outils/README.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Les outils et frameworks autour d&#39;Angular
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 94.11764705882354%;min-width: 88.23529411764706%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../chap-00/README.html" title="1ers pas" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../chap-00/01-preparation.html" title="Préparation" class="chapter done " data-progress="1.1" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../chap-00/02-architecture-minimale.html" title="Architecture minimale" class="chapter done " data-progress="1.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../chap-00/03-ajouter-un-formulaire.html" title="Formulaire" class="chapter done " data-progress="1.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../chap-00/04-utiliser-une-factory.html" title="Factory" class="chapter done " data-progress="1.4" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../chap-01/README.html" title="Jouer avec le serveur" class="chapter done new-chapter" data-progress="2" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../chap-01/01-services-api-http.html" title="Services et API $http" class="chapter done " data-progress="2.1" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../chap-01/02-service-resource.html" title="Service $resource" class="chapter done " data-progress="2.2" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../chap-01/03-refactoring.html" title="Pourquoi faire compliqué" class="chapter done " data-progress="2.3" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../chap-02/README.html" title="Améliorer l&#39;IHM" class="chapter done new-chapter" data-progress="3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../chap-02/01-ihm.html" title="Un peu d&#39;ihm et de formulaire" class="chapter done " data-progress="3.1" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../chap-02/02-filters.html" title="Filter et Filters" class="chapter done " data-progress="3.2" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../chap-02/03-include.html" title="Inclusion d&#39;html" class="chapter done " data-progress="3.3" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../chap-02/04-router.html" title="Utilisation d&#39;un routeur" class="chapter done " data-progress="3.4" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../chap-03/README.html" title="Organiser le projet" class="chapter done new-chapter" data-progress="4" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../chap-03/01-modules.html" title="Utiliser le pattern module" class="chapter done " data-progress="4.1" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../chap-outils/README.html" title="Les outils et frameworks autour d&#39;Angular" class="chapter  new-chapter" data-progress="5" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_17">
+                    
+                        <h1 id="organisation-de-projet-utilisation-du-pattern-module-">Organisation de projet (utilisation du pattern module)</h1>
+<p>Bon, notre projet devient vite un peu &quot;pénible&quot; à maintenir d&#39;un point de vue &quot;javascript&quot;, tout est dans <code>main.js</code>.
+Nous allons donc &quot;splitter&quot; ça en plusieurs fichiers. Nous n&#39;allons pas utiliser <strong>Require.js</strong> (soit dit en pensant, vu les possibilité de modularisation d&#39;Angular, je ne suis pas convaincu du tout d&#39;avoir besoin de Require).
+Alors, la structure que je vais vous proposer n&#39;est pas parfaite, il y a d&#39;autre moyens de faire, à vous de décliner en fonction de vos règles projets, sensibilités, habitudes, etc. ...</p>
+<p>Une piste serait d&#39;organiser d&#39;une manière plus &quot;fonctionnelle&quot;, mais c&#39;est un autre sujet (que j&#39;aborderais certainement).</p>
+<h2 id="pr-paration">Préparation</h2>
+<p>Apportons quelques modifications à l&#39;arborescence de notre projet:</p>
+<p>Dans le répertoire <code>js</code>, nous allons créer un répertoire <code>controllers</code> avec 4 fichiers javascript:</p>
+<pre><code>js/
+ └── controllers/
+     ├── ActualitesCtrl.js
+     ├── AdditionCtrl.js
+     ├── CoupsDeCoeurCtrl.js
+     └── MainCtrl.js
+</code></pre><p>Ensuite, toujours dans le répertoire <code>js</code>, nous allons créer un répertoire <code>factories</code> avec 2 fichiers javascript:</p>
+<pre><code>   js/
+    └── factories/
+        ├── Book.js
+        └── Models.js
+</code></pre><p>Nous devrions donc avoir la structure suivante:</p>
+<pre><code>votre_projet/
+├── public/
+|   ├── bower_components/ /* angular est par ici */
+|   ├── js/
+|   |    ├── controllers/
+|   |    |   ├── ActualitesCtrl.js
+|   |    |   ├── AdditionCtrl.js
+|   |    |   ├── CoupsDeCoeurCtrl.js
+|   |    |   └── MainCtrl.js
+|   |    ├── factories/
+|   |    |   ├── Book.js
+|   |    |   └── Models.js
+|   |    └── main.js
+|   ├── books/
+|   |    ├── bookForm.html
+|   |    └── booksList.html
+|   ├── templates/
+|   |    ├── actualites.html
+|   |    ├── addition.html
+|   |    └── coupsdecoeur.html
+|   └── index.html
+├── bower.json
+└── .bowerrc
+</code></pre><h2 id="refactoring-c-est-parti-">Refactoring, c&#39;est parti!</h2>
+<p>Maintenant nous allons passer dans chacun des nouveaux fichiers.</p>
+<h3 id="-models-js-"><code>Models.js</code></h3>
+<p>Nous allons extraire le code concernant les modèles dans <code>main.js</code> pour le &quot;transférer&quot; dans <code>Model.js</code>.</p>
+<p><strong>Avant (dans <code>main.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">booksApp.factory(<span class="hljs-string">"Models"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> levels = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> [
+      <span class="hljs-string">""</span>, <span class="hljs-string">"très bon"</span>, <span class="hljs-string">"bon"</span>, <span class="hljs-string">"débutant"</span>
+    ];
+  }
+
+  <span class="hljs-keyword">return</span> {
+    levels : levels
+  }
+});
+</code></pre>
+<p><strong>Après (dans <code>/factories/Models.js</code>)</strong>:</p>
+<p>La modification n&#39;est pas énorme.</p>
+<ul>
+<li>Il faut bien penser à encapsuler le code dans <code>(function () { //foo }());</code> (module &quot;pattern&quot;, allez lire ceci <a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank">http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html</a>).</li>
+<li>Et déclarer notre <code>Models</code> dans le module principal : <code>angular.module(&quot;booksApp&quot;).factory(&quot;Models&quot;, Models);</code></li>
+</ul>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">var</span> Models = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> levels = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      <span class="hljs-keyword">return</span> [
+        <span class="hljs-string">""</span>, <span class="hljs-string">"très bon"</span>, <span class="hljs-string">"bon"</span>, <span class="hljs-string">"débutant"</span>
+      ];
+    }
+
+    <span class="hljs-keyword">return</span> {
+      levels : levels
+    }
+  };
+
+  <span class="hljs-comment">//Models.$inject = []; pas d'injection</span>
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).factory(<span class="hljs-string">"Models"</span>, Models);
+
+}());
+</code></pre>
+<h3 id="-book-js-"><code>Book.js</code></h3>
+<p>Nous allons extraire le code dans <code>main.js</code> pour le &quot;transférer&quot; dans <code>Book.js</code>, sur le même principe que précédemment:</p>
+<p><strong>Avant (dans <code>main.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">booksApp.factory(<span class="hljs-string">"Book"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($resource)</span> {</span>
+  <span class="hljs-keyword">return</span> $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{
+    update: { method: <span class="hljs-string">'PUT'</span> , params: {id: <span class="hljs-string">'@id'</span>}, isArray: <span class="hljs-literal">false</span> }
+  });
+})
+</code></pre>
+<p><strong>Après (dans <code>/factories/Book.js</code>)</strong>:</p>
+<ul>
+<li>Il faut bien penser à encapsuler le code dans <code>(function () { //foo }());</code></li>
+<li>Attention, il faut passer la dépendance : <code>$resource</code>, alors <code>Book.$inject = [&quot;$resource&quot;]</code> n&#39;est pas forcément obligatoire, mais si vous minifiez votre code, ça peut vous rendre service</li>
+<li>Et déclarer notre factory <code>Book</code> dans le module principal : <code>angular.module(&quot;booksApp&quot;).factory(&quot;Book&quot;, Book);</code></li>
+</ul>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">var</span> Book = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($resource)</span> {</span>
+    <span class="hljs-keyword">return</span> $resource(<span class="hljs-string">"/books/:id"</span>, {id: <span class="hljs-string">'@id'</span>},{
+      update: { method: <span class="hljs-string">'PUT'</span> , params: {id: <span class="hljs-string">'@id'</span>}, isArray: <span class="hljs-literal">false</span> }
+    });
+  };
+
+  Book.$inject = [<span class="hljs-string">"$resource"</span>];
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).factory(<span class="hljs-string">"Book"</span>, Book);
+
+}());
+</code></pre>
+<p>Nous allons utiliser le même principe pour les contrôleurs :</p>
+<h3 id="-actualitesctrl-js-"><code>ActualitesCtrl.js</code></h3>
+<p><strong>Après (dans <code>/controllers/ActualitesCtrl.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">var</span> ActualitesCtrl = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope)</span> {</span>
+    $scope.title = <span class="hljs-string">"Actualités"</span>;
+    $scope.news = [
+      { title:<span class="hljs-string">"Un nouveau Stephen King à venir?"</span> }
+      , { title:<span class="hljs-string">"Le Kindle paperwhite est juste une turie"</span> }
+      , { title:<span class="hljs-string">"Le format epub 3 en détail"</span> }
+    ];
+  };
+
+  ActualitesCtrl.$inject = [<span class="hljs-string">"$scope"</span>];
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).controller(<span class="hljs-string">"ActualitesCtrl"</span>, ActualitesCtrl);
+
+}());
+</code></pre>
+<h3 id="-coupsdecoeurctrl-js-"><code>CoupsDeCoeurCtrl.js</code></h3>
+<p><strong>Après (dans <code>/factories/CoupsDeCoeurCtrl.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> CoupsDeCoeurCtrl = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope)</span> {</span>
+    $scope.title = <span class="hljs-string">"Coups de Coeur"</span>;
+    $scope.items = [
+      { title:<span class="hljs-string">"Game of Thrones"</span> }
+      , { title:<span class="hljs-string">"Bilbo le Hobbit"</span> }
+      , { title:<span class="hljs-string">"Le sorcier de TerreMère"</span> }
+    ];
+  };
+
+  CoupsDeCoeurCtrl.$inject = [<span class="hljs-string">"$scope"</span>];
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).controller(<span class="hljs-string">"CoupsDeCoeurCtrl"</span>, CoupsDeCoeurCtrl);
+}());
+</code></pre>
+<h3 id="-additionctrl-js-"><code>AdditionCtrl.js</code></h3>
+<p><strong>Après (dans <code>/factories/AdditionCtrl.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">var</span> AdditionCtrl = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope, $routeParams)</span> {</span>
+    $scope.result = <span class="hljs-built_in">parseInt</span>($routeParams[<span class="hljs-string">'a'</span>]) + <span class="hljs-built_in">parseInt</span>($routeParams[<span class="hljs-string">'b'</span>]);
+  };
+
+  AdditionCtrl.$inject = [<span class="hljs-string">"$scope"</span>, <span class="hljs-string">"$routeParams"</span>];
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).controller(<span class="hljs-string">"AdditionCtrl"</span>, AdditionCtrl);
+
+}());
+</code></pre>
+<p>Et enfin :</p>
+<h3 id="-mainctrl-js-"><code>MainCtrl.js</code></h3>
+<p><strong>Après (dans <code>/factories/MainCtrl.js</code>)</strong>:</p>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+
+  <span class="hljs-keyword">var</span> MainCtrl = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope, Models, Book)</span> {</span>
+
+    $scope.whenFormIsLoaded = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> console.log(<span class="hljs-string">"Form is loaded ..."</span>); }
+    $scope.whenListIsLoaded = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> console.log(<span class="hljs-string">"List is loaded ..."</span>); }
+
+    $scope.books = <span class="hljs-literal">null</span>;
+    $scope.levels = Models.levels();
+
+    $scope.selectBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+      $scope.book = book;
+    }
+
+    $scope.getAllBooks = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      Book.query().$promise.then(
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          $scope.books = data;
+        },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>
+          console.log(<span class="hljs-string">"getAllBooks"</span>, error);
+        }
+      )
+    }
+
+    $scope.saveBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+      book._id !== <span class="hljs-literal">undefined</span> ? $scope.updateBook(book) : $scope.createBook(book);
+    }
+
+    $scope.createBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+      Book.save(book).$promise.then(
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          $scope.getAllBooks();
+          $scope.newBook();
+        },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>
+          console.log(<span class="hljs-string">"createBook"</span>, error);
+        }
+      )
+    }
+
+    $scope.newBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      $scope.book = {};
+    }
+
+    $scope.updateBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(book)</span> {</span>
+      Book.update({id: book._id}, book).$promise.then(
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          $scope.newBook();
+          $scope.getAllBooks();
+        },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>
+          console.log(<span class="hljs-string">"updateBook"</span>, error);
+        }
+      )
+    }
+
+    $scope.deleteBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id)</span> {</span>
+      Book.delete({id: id}).$promise.then(
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          $scope.getAllBooks();
+          $scope.newBook();
+        },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>
+          console.log(<span class="hljs-string">"book delete ERROR"</span>, error);
+        }
+      )
+    }
+
+
+    $scope.getBook = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id)</span> {</span>
+      Book.get({id:id}).$promise.then(
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          console.log(data);
+          $scope.book = data;
+        },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(error)</span> {</span>
+          console.log(<span class="hljs-string">"getBook"</span>, error);
+        }
+      )
+    }
+
+    $scope.getAllBooks()
+  };
+
+  MainCtrl.$inject = [<span class="hljs-string">"$scope"</span>, <span class="hljs-string">"Models"</span>, <span class="hljs-string">"Book"</span>];
+
+  angular.module(<span class="hljs-string">"booksApp"</span>).controller(<span class="hljs-string">"MainCtrl"</span>, MainCtrl);
+
+}());
+</code></pre>
+<h2 id="encore-quelques-modifications">Encore quelques modifications</h2>
+<h3 id="-main-js-"><code>main.js</code></h3>
+<p>Là aussi utilisons le module &quot;pattern&quot;. Maintenant, votre code doit ressembler à ceci:</p>
+<pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> booksApp = angular.module(<span class="hljs-string">"booksApp"</span>, [<span class="hljs-string">"ngResource"</span>, <span class="hljs-string">"ngRoute"</span>]);
+
+  booksApp.config([<span class="hljs-string">'$routeProvider'</span>,
+    <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($routeProvider)</span> {</span>
+
+      $routeProvider.
+        when(<span class="hljs-string">'/actualites'</span>, {
+          templateUrl: <span class="hljs-string">"templates/actualites.html"</span>,
+          controller: <span class="hljs-string">"ActualitesCtrl"</span>
+        })
+        .when(<span class="hljs-string">'/coupsdecoeur'</span>, {
+          templateUrl: <span class="hljs-string">"templates/coupsdecoeur.html"</span>,
+          controller: <span class="hljs-string">"CoupsDeCoeurCtrl"</span>
+        })
+        .when(<span class="hljs-string">'/addition/:a/:b'</span>, {
+          templateUrl: <span class="hljs-string">"templates/addition.html"</span>,
+          controller: <span class="hljs-string">"AdditionCtrl"</span>
+        })
+        .otherwise({
+          redirectTo: <span class="hljs-string">"/"</span>
+        })
+
+    }
+  ]);
+
+  booksApp.filter(<span class="hljs-string">"stars"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+      <span class="hljs-keyword">switch</span> (data) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"très bon"</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">"***"</span>;
+          <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"bon"</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">"**"</span>;
+          <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"débutant"</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">"*"</span>;
+          <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>;
+      }
+    }
+  });
+
+})();
+</code></pre>
+<p>Bien sûr, rien ne vous empêche d&#39;externaliser <code>filter</code> et <code>config</code></p>
+<p>Et finalement:</p>
+<h3 id="-index-html-"><code>index.html</code></h3>
+<p>Il ne faut bien sûr pas oublier de référencer tous nos scripts: <em>(il existe des solutions simples pour faciliter la gestion de ces références mais c&#39;est un autre sujet)</em>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/main.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/factories/Models.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/factories/Book.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/controllers/AdditionCtrl.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/controllers/ActualitesCtrl.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/controllers/CoupsDeCoeurCtrl.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/controllers/MainCtrl.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>ET hop, c&#39;est fini! Vous pouvez tout relancer, cela fonctionne comme avant et votre projet est plus facile à maintenir.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chap-03/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chap-outils/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"ga":{"token":"UA-11383603-13"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
